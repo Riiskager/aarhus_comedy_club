@@ -1,3 +1,19 @@
-footer{
-   background: #9D8070;
+:root {
+  --footer-bg: #9d8070;
+  --footer-text: #fff;
+  --footer-muted: rgba(255, 255, 255, 0.85);
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links {
+  max-width: 4rem;
 }
