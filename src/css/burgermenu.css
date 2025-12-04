@@ -13,14 +13,16 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
+    top: 35px;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: 10;
-    background-color: var(--morkebrun);
+    background-color: rgb(138, 102, 83, 0.95);
     transform: translateY(-100%);
     transition: transform 1.5s ease; /* <-- important */
+    overflow-y: auto;       /* allows scrolling inside the menu */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 .mobile-menu.open {
   animation: slideDown 0.5s forwards;
@@ -55,9 +57,12 @@
     text-align: center;
     font-size: xx-large;
     margin-top: 2rem;
+    color: var(--lysbeige);
+
 }
 .mobile-menu li{
     margin-bottom: 4rem;
+
 }
 
 @media (max-width: 800px){

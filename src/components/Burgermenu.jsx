@@ -5,19 +5,22 @@ import '../css/burgermenu.css'
 export default function BurgerMenu() {
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
+
   const toggleMenu = () => {
     if (open) {
+        document.body.style.overflow = "hidden"
       // start closing animation
       setClosing(true);
       // remove menu after animation duration (500ms)
       setTimeout(() => {
         setOpen(false);
         setClosing(false);
-      }, 450);
+      }, 500);
     } else {
       setOpen(true); // open menu
     }
   };
+  
 
   return (
     <>
