@@ -1,25 +1,36 @@
-.burgermenu{
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-    z-index: 10;
+.burger{
+    background-color: none;
+    background: none;
+    border: none;
+    font-style: none;
+    font-size: xx-large;
+    color: var(--lysbeige);
+    position: relative;
+    z-index: 1000;
 }
 
-.burger{
-    width: 2rem;
-    height: 0.25rem;
-    border-radius: 10px;
-    background-color: var(--totalmork);
-    transform-origin: 1px;
-    transition: all 0.3 linear;
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: var(--morkebrun);
+}
+.mobile-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+   
+
 }
 
 @media (max-width: 800px){
-    .burgermenu{
-    display: fixed;
-    padding-top: 10px;
-    z-index: 10;
-}
+    .desktop-nav{
+        display: none;
+    }
 }
