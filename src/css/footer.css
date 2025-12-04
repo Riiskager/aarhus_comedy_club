@@ -1,20 +1,34 @@
 footer {
   background-color: var(--morkebrun);
   color: var(--lysbeige);
+  font-family: var(--broed);
   padding: 2rem 1rem;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem 0;
+}
+
+.fugaz {
+  font-family: var(--overskrift)
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
   align-items: center;
 }
 
 .social-links img {
-  width: 5rem;
+  width: 4rem;
 }
 
 a img {
-  width: 10rem;
+  width: 25rem;
 }
 
 a {
@@ -24,5 +38,11 @@ a {
 .footer-navigering {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 1rem;
 }
+
+.cvr {
+  font-family: var(--broed);
+}  
+
+
