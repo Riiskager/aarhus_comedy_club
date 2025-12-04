@@ -1,7 +1,10 @@
 .header{
     display: flex;
     justify-content: space-between;
+    align-items:end;
     background-color: var(--morkebrun);
-    color: var(--totalmork);
+    color: var(--lysbeige);
     font-family: var(--overskrift);
+    height: 4rem;
+    padding: 2px 1rem;
 }
