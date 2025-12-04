@@ -7,7 +7,9 @@ export default function Header(){
    
     return(
         <div className="header">
-        <i>X</i>
+        <a href="/" aria-label="Forside"> 
+        <img src="/img/home.svg" alt="home"></img>
+        </a>
         <p>Aarhus Comedy Club</p>
         <Burgermenu />
         </div>
