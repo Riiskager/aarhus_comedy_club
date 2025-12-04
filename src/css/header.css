@@ -5,6 +5,7 @@
     background-color: var(--morkebrun);
     color: var(--lysbeige);
     font-family: var(--overskrift);
-    height: 4rem;
+    font-size: 20px;
+    height: 104px;
     padding: 2px 1rem;
 }
