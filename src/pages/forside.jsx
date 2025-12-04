@@ -1,10 +1,34 @@
-import EventsList from "../components/eventcard";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
+import Eventcard from "../components/eventcard";
 
 export default function Forside(){
-    return(
+
+    const [events, setEvents] = useState([]);
+
+    useEffect(() => {
+        async function LoadEvents() {
+            const ref = collection(db, "events");
+            const snap = await getDocs(ref);
+
+            const list = snap.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+
+            console.log(list);
+            setEvents(list);
+        }
+
+        LoadEvents();
+    }, []);
+
+    return (
         <div>
-            <EventsList />        
-        </div> 
-    )
-       
+            {events.map(event => (
+                <Eventcard key={event.id} event={event} />
+            ))}
+        </div>
+    );
 }
