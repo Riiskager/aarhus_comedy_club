@@ -1,19 +1,28 @@
-:root {
-  --footer-bg: #9d8070;
-  --footer-text: #fff;
-  --footer-muted: rgba(255, 255, 255, 0.85);
-}
-
 footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
+  background-color: var(--morkebrun);
+  color: var(--lysbeige);
   padding: 2rem 1rem;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.social-links {
-  max-width: 4rem;
+.social-links img {
+  width: 5rem;
+}
+
+a img {
+  width: 10rem;
+}
+
+a {
+  color: var(--lysbeige);
+}
+
+.footer-navigering {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
 }
