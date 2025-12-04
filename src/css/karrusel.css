@@ -1,0 +1,33 @@
+:root {
+  --k-bg: #000;
+  --k-accent: rgba(255, 255, 255, 0.9);
+}
+
+.karrusel {
+  position: relative;
+}
+
+.karrusel-slide {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.karrusel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: var(--lysbeige);
+  font-size: 34px;
+  width: 48px;
+  height: 48px;
+}
+
+.karrusel-arrow.left {
+  left: px;
+}
+.karrusel-arrow.right {
+  right: 12px;
+}
