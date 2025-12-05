@@ -15,3 +15,8 @@
     --overskrift: "Fugaz One", sans-serif;
 
 }
+
+body{
+    background-color: var(--lysebrun);
+    font-family: var(--broed);
+}

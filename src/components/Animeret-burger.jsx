@@ -60,8 +60,6 @@ export default function AnimeretBurger() {
     }
   }, []);
 
-  // Render the minimal DOM structure expected by the script.
-  // Keep markup simple; styles should be defined in your CSS.
   return (
     <>
       <button className="burger" aria-label="Åben navigation">
