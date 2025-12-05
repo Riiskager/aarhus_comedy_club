@@ -43,7 +43,7 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    z-index: 999;
+    z-index: 15;
     width: 100vw;
     min-height: 100vh;
     height: fit-content;
@@ -106,6 +106,7 @@
     margin-top: -1rem;
     font-family: var(--broed);
     pointer-events: none;
+    text-decoration: none;
 }
 
 .submenuitem.open li{
@@ -114,5 +115,5 @@
     position: inherit;
     margin-top: 3.5rem;
     pointer-events: all;
-    
+
 }
