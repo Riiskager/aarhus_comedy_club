@@ -1,66 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import '../css/burgermenu.css'
-
+import Burger from "./Burger";
 
 export default function BurgerMenu() {
-  const [open, setOpen] = useState(false);
-  const [closing, setClosing] = useState(false);
+    const [open, setOpen] =useState(false);
+   
+    useEffect(() =>{
+        if(open){
+            document.body.style.overflow="hidden";
+        } else {
+            document.body.style.overflow="";
+        }
 
-  const toggleMenu = () => {
-    if (open) {
-        document.body.style.overflow = "hidden"
-      // start closing animation
-      setClosing(true);
-      // remove menu after animation duration (500ms)
-      setTimeout(() => {
-        setOpen(false);
-        setClosing(false);
-      }, 500);
-    } else {
-      setOpen(true); // open menu
-    }
-  };
-  
-  const [subOpen, setsubOpen] = useState(false);
+    },[open])
 
   return (
     <>
-      <button 
-        className="burger"
-        onClick={toggleMenu}
-      >
-        {open ? "✕" : "☰"}
-      </button>
-      
-      {/* desktop nav */}
-      <nav className="desktop-nav">
-        {/*Navlinks */}
-      </nav>
+   <Burger open={open} setOpen={setOpen} />
 
-
-       {(open || closing) && (
-        <div
-          className={`mobile-menu ${open && !closing ? "open" : ""} ${
-            closing ? "closing" : ""
-          }`}
-        >
-          <ul>
-            <li>Program</li>
-            <li onClick={() => setsubOpen(true)}>Komikere</li>
-            <li>Booking</li>
-            <li>Om os</li>
-            <li>Gavekort</li>
-          </ul>
-
-           <div className={`submenu ${subOpen ? "open" : ""}`}>
-            <ul>
-            <li>Sub item 1</li>
-            <li>Sub item 2</li>
-            <li>Sub item 3</li>
-          </ul>
-        </div>
-        </div>
-      )}
-    </>
+   <div className={`menu ${open ? "open" : ""}`}>
+    <ul>
+        <li className="menuitem"> <a href="/"> Program</a></li>
+        <li className="menuitem">Komikere</li>
+        <li className="menuitem">Booking</li>
+        <li className="menuitem">Om os</li>
+        <li className="menuitem">Gavekort</li>
+     
+    </ul>   
+    <a href="/" aria-label="Forside">
+        <img
+          src="/img/Logo.svg"
+          alt="Aarhus Comedy Club logo"
+          className="logoheader"
+        />
+      </a>
+   </div>
+   </>
   );
 }

@@ -7,9 +7,12 @@
     font-family: var(--overskrift);
     font-size: 20px;
     height: 104px;
-    padding: 2px 1rem;
+    padding: 0rem 1.5rem 0.5rem 1.5rem;
+}
+.header p{
+    margin-bottom: 0.5rem;
 }
 
-.header img{
+.hjemknap{
     width: 40px;
 }
