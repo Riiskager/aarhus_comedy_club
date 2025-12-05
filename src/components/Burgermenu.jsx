@@ -21,6 +21,7 @@ export default function BurgerMenu() {
     }
   };
   
+  const [subOpen, setsubOpen] = useState(false);
 
   return (
     <>
@@ -31,13 +32,11 @@ export default function BurgerMenu() {
         {open ? "✕" : "☰"}
       </button>
       
-        
-
-
       {/* desktop nav */}
       <nav className="desktop-nav">
         {/*Navlinks */}
       </nav>
+
 
        {(open || closing) && (
         <div
@@ -47,11 +46,19 @@ export default function BurgerMenu() {
         >
           <ul>
             <li>Program</li>
-            <li>Komikere</li>
+            <li onClick={() => setsubOpen(true)}>Komikere</li>
             <li>Booking</li>
             <li>Om os</li>
             <li>Gavekort</li>
           </ul>
+
+           <div className={`submenu ${subOpen ? "open" : ""}`}>
+            <ul>
+            <li>Sub item 1</li>
+            <li>Sub item 2</li>
+            <li>Sub item 3</li>
+          </ul>
+        </div>
         </div>
       )}
     </>
