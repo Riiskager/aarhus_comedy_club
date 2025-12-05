@@ -1,5 +1,7 @@
 import "../css/eventcard.css";
 
+
+
 export default function Eventcard({ event }) {
   const dateObj =
     event?.dato && typeof event.dato.toDate === "function"
@@ -78,4 +80,5 @@ export default function Eventcard({ event }) {
   );
 
   
+
 }
