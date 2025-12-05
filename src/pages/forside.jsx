@@ -27,14 +27,14 @@ export default function Forside() {
 
   return (
     <div>
-      {/* Carousel with 5 skærmbilleder from public/img */}
+      {}
       <ForsideKarrusel
         images={[
-          "/img/Skærmbillede 2025-12-04 kl. 13.31.11.png",
-          "/img/Skærmbillede 2025-12-04 kl. 13.31.22.png",
-          "/img/Skærmbillede 2025-12-04 kl. 13.30.58.png",
-          "/img/Skærmbillede 2025-12-04 kl. 13.31.31.png",
-          "/img/Skærmbillede 2025-12-04 kl. 13.31.40.png",
+          "/img/kim.png",
+          "/img/johnny.png",
+          "/img/mia.png",
+          "/img/pas.png",
+          "/img/henrik.png",
         ].map((p) => encodeURI(p))}
       />
       {events.map((event) => (
