@@ -39,15 +39,16 @@
 /* Styling af selve burgermenuens toppunkter */
 
 .menu{
-    position: absolute;
+    position: fixed;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    z-index: 10;
+    z-index: 999;
     width: 100vw;
     min-height: 100vh;
     height: fit-content;
     left: 0;
-    background-color: var(--morkebrun);
+    background-color:rgb(138, 102, 83, 0.95);
     align-items: center;
     top:-100vh;
     transition: 0.8s ease;
@@ -55,6 +56,7 @@
 }
 .menu.open{
     top: 0;
+
 }
 
 .menuitem a{
@@ -73,4 +75,41 @@
     margin-top: 4rem;
     font-size: 35px;
     list-style: none;
+}
+
+/*Undermenu tingene*/
+
+.submenu{
+    transition: 1s ease;
+    border-radius: 10px;
+    width: 90vw;
+    height: 3rem;
+    align-content: center;
+}
+
+.submenu.open{
+    background-color:  var(--totalmork);
+    height: 18rem;
+}
+
+
+.submenuitem li{
+    font-size: 25px;
+    position: inherit;
+    display: block;
+    justify-content: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 1s ease;
+    width: 90vw;
+    border-radius: 10px;
+    margin-top: -1rem;
+    font-family: var(--broed);
+}
+
+.submenuitem.open li{
+    opacity: 1;
+    transform: translateY(-10%);
+    position: inherit;
+    margin-top: 3.5rem;
 }
