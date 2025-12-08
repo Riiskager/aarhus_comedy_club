@@ -5,6 +5,7 @@ import Header from './components/header'
 import ForsideKarrusel from './components/forside-karrusel'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import Kontakt from './pages/Kontakt'
+import Gavekort from './pages/Gavekort'
 
 function App() {
  
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="*" element={<Forside />} />
+        <Route path="/gavekort" element={<Gavekort/>}/>
       </Routes>
     </BrowserRouter>
   );
