@@ -4,16 +4,19 @@ import Burger from "./Burger";
 
 export default function BurgerMenu() {
     const [open, setOpen] =useState(false);
+      const [openSubmenu, setOpenSubmenu] = useState(null);  
+      
     useEffect(() =>{
         if(open){
             document.body.style.overflow="hidden";
         } else {
             document.body.style.overflow="";
+            setOpenSubmenu(null); //Ikke en fejl, kun på grund af "strict mode"
         }
 
     },[open])
 
-    const [openSubmenu, setOpenSubmenu] = useState(null);   
+   
 
   return (
     <>
@@ -34,11 +37,11 @@ export default function BurgerMenu() {
         <li onClick={() => setOpenSubmenu(openSubmenu === "booking" ? null : "booking")}
             className={`submenu ${openSubmenu === "booking" ? "open" : ""}`}>
             Booking
-        <ul className={`submenuitem ${openSubmenu === "booking" ? "open" : ""}`}>
+        <ul className={`submenuitemb ${openSubmenu === "booking" ? "open" : ""}`}>
             <li className="komikerliste"><a href="/komikerliste">Komikere</a></li>
-            <li className="booking"><a href="/booking">Julefrokost</a></li>
-            <li className="booking"><a href="/booking">Lej lokalet</a></li>
-            <li className="booking"><a href="/booking">Book os</a></li>
+            <li className="bookings"><a href="/booking">Julefrokost</a></li>
+            <li className="bookings"><a href="/booking">Lej lokalet</a></li>
+            <li className="bookings"><a href="/booking">Book os</a></li>
         </ul>
          </li>
         <li onClick={() => setOpenSubmenu(openSubmenu === "omos" ? null : "omos")}
@@ -50,7 +53,7 @@ export default function BurgerMenu() {
         </ul>
       
         </li>
-        <li className="menuitem">Gavekort</li>
+        <li className="menuitem"><a href="/gavekort">Gavekort</a></li>
      
     </ul>   
     <a href="/" aria-label="Forside">
