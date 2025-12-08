@@ -1,0 +1,92 @@
+.introtekst h1{
+    font-family: var(--overskrift);
+}
+
+.toptekst{
+    margin-bottom: 2rem;
+    font-size: 20px;
+}
+.tidtekst{
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.introtekst{
+    color: var(--totalmork);
+    margin: 1rem;
+}
+.introtekst a{
+    color: var(--totalmork);
+    font-size: 20px;
+}
+
+
+/*Formularen*/
+
+.formular h1{
+    background-color: var(--morkebrun);
+    color: var(--lysbeige);
+    border-radius: 10px 10px 0 0;
+    padding: 1rem 0;
+    font-family: var(--overskrift);
+}
+.formular{
+    color: var(--totalmork);
+    width: 90vw;
+    background-color: var(--lysbeige);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 10px;
+    height: fit-content;
+    padding-bottom: 2rem;
+}
+
+.formular input{
+    border-radius: 10px;
+    border: 2px solid var(--morkebrun);
+}
+/*dropdown*/
+.formaal{
+    margin: 1rem 0;
+    width: 80%;
+    height: 4rem;
+    font-size: 20px;
+    font-family: var(--broed);
+    border-radius: 10px;
+    color: var(--morkebrun);
+    border: 2px solid var(--morkebrun);
+}
+
+/*resten af formular*/
+
+.navnmail{
+    margin: 1rem 0;
+    width: 80%;
+    height: 4rem;
+    font-size: 20px;
+    font-family: var(--broed);
+}
+
+.besked{
+    margin: 1rem 0;
+    width: 80%;
+    height: 8rem;
+    font-size: 20px;
+    font-family: var(--broed);
+}
+
+/*Knap styling*/
+
+.knap{
+    border: none;
+    background-color: var(--blaa);
+    width: 60%;
+    height: 3rem;
+    color: var(--lysbeige);
+    font-family: var(--broed);
+    font-weight: 600;
+    font-size: 24px;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+}

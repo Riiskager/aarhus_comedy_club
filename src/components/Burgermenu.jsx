@@ -48,8 +48,9 @@ export default function BurgerMenu() {
             className={`submenu ${openSubmenu === "omos" ? "open" : ""}`}>
             Om os
         <ul className={`submenuitem ${openSubmenu === "omos" ? "open" : ""}`}>
-            <li className="komikerliste">Komikerliste</li>
-            <li className="impro-holdet">Impro-holdet</li>
+            <li className="historie"><a href="/historie">Vores Historie</a></li>
+            <li className="kontakt"><a href="/kontakt">Kontakt</a></li>
+            <li className="Faq"><a href="/faq">F.A.Q</a></li>
         </ul>
       
         </li>
