@@ -30,34 +30,7 @@ export default function Eventcard({ event }) {
     time = "";
   }
 
-  let displayPris = "";
-  try {
-    const rawPris = event?.pris;
-    const cleaned = String(rawPris ?? "")
-      .replace(",", ".")
-      .replace(/[^0-9.]/g, "");
-    const numeric = cleaned === "" ? NaN : parseFloat(cleaned);
-    if (!isNaN(numeric) && numeric === 0) {
-      displayPris = "Gratis";
-    } else if (!isNaN(numeric) && numeric > 0) {
-      // Format number using Danish locale and append ' kr.'
-      try {
-        const formatter = new Intl.NumberFormat("da-DK", {
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 2,
-        });
-        displayPris = `${formatter.format(numeric)} kr.`;
-      } catch {
-        displayPris = String(rawPris) + " kr.";
-      }
-    } else if (rawPris !== undefined && rawPris !== null && rawPris !== "") {
-      displayPris = rawPris;
-    } else {
-      displayPris = "";
-    }
-  } catch {
-    displayPris = event?.pris ?? "";
-  }
+  
 
   return (
     <section className="show">
