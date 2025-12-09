@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../css/komikerliste.css";
+import "../css/komikercard.css";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 
@@ -20,13 +20,20 @@ export default function Komikercard() {
   const imgSrc = komiker?.img ? encodeURI(komiker.img) : "/img/jcb.png";
 
   return (
-    <section className="show">
-      <img src={imgSrc} alt="" className="event-img" />
-      <h1 className="event-titel">{komiker?.navn}</h1>
-      <p className="event-kort-beskrivelse">{komiker?.Beskrivelse}</p>
-      <a href="#" className="event-koeb">
-        <b>køb billet</b>
-      </a>
+    <section className="komiker">
+      <img src={imgSrc} alt="" className="komiker-img" />
+      <h1 className="komiker-titel">{komiker?.navn}</h1>
+      <p className="komiker-beskrivelse">{komiker?.Beskrivelse}</p>
+      <div className="komiker-blaa">
+        <div className="komiker-social">
+          <img src="/img/instagram.svg" alt="Instagram" />
+          <img src="/img/facebook.svg" alt="Instagram" />
+        </div>
+        <a href="#" className="komiker-book">
+          <b>Book</b>
+        </a>
+      </div>
     </section>
   );
 }
+

@@ -9,10 +9,10 @@ export default function Footer() {
       </div>
       <div className="social-links">
         <a href="https://www.instagram.com/aarhuscomedyclub/">
-          <img src="/img/instagram.svg" alt="Instagram" />
+          <img src="/img/instagram-hvid.svg" alt="Instagram" />
         </a>
         <a href="https://www.facebook.com/aarhuscomedyclub">
-          <img src="/img/facebook.svg" alt="Facebook" />
+          <img src="/img/facebook-hvid.svg" alt="Facebook" />
         </a>
       </div>
       <div>
