@@ -1,3 +1,11 @@
-export default function Event() {
-  return (
-<h1>HEJSA</h1> )}
+import { useParams } from "react-router";
+
+export default function EventPage() {
+    const { id } = useParams();
+
+    return (
+        <div>
+            <h1>Event ID: {id}</h1>
+        </div>
+    );
+}
