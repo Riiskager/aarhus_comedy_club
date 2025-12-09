@@ -8,7 +8,7 @@ export default function BurgerMenu() {
       
     useEffect(() =>{
         if(open){
-            document.body.style.overflow="hidden";
+            document.body.style.overflow="hidden"; //Hvis burgermenu er åben, så skal man ikke kunne scrolle på "body"
         } else {
             document.body.style.overflow="";
             setOpenSubmenu(null); //Ikke en fejl, kun på grund af "strict mode"
@@ -22,13 +22,13 @@ export default function BurgerMenu() {
     <>
    <Burger open={open} setOpen={setOpen} />
 
-   <div className={`menu ${open ? "open" : ""}`}>
+   <div className={`menu ${open ? "open" : ""}`}> {/*Tjekker om "open" er sandt, hvis det er, ændrer navn*/}
     <ul>
         <li className="menuitem"> <a href="/"> Program</a></li>
-        <li onClick={() => setOpenSubmenu(openSubmenu === "komikere" ? null : "komikere")}
-            className={`submenu ${openSubmenu === "komikere" ? "open" : ""}`}>
+        <li onClick={() => setOpenSubmenu(openSubmenu === "komikere" ? null : "komikere")} 
+            className={`submenu ${openSubmenu === "komikere" ? "open" : ""}`}> {/*Tjekker om submenu er = komiker, hvis ja, skift navn på denne submenu*/}
             Komikere
-        <ul className={`submenuitem ${openSubmenu === "komikere" ? "open" : ""}`}>
+        <ul className={`submenuitem ${openSubmenu === "komikere" ? "open" : ""}`}> {/*Tjekker om submenu er = komiker, hvis ja, skift navn på disse submenu items*/}
             <li className="komikerliste"><a href="/komikerliste">Komikerliste</a></li>
             <li className="impro-holdet"><a href="/impro-holdet">Impro-holdet</a></li>
         </ul>
