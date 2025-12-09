@@ -5,20 +5,19 @@ import Komikercard from "../components/komikercard";
 import ForsideKarrusel from "../components/forside-karrusel";
 
 export default function Komikerliste() {
-  const [firstKomiker, setFirstKomiker] = useState(null);
+  const [komikere, setKomikere] = useState([]);
 
   useEffect(() => {
     async function LoadKomikere() {
       const ref = collection(db, "komikere");
       const snap = await getDocs(ref);
 
-      const list = snap.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+   setKomikere(
+    snap.docs
+    .map((doc) => ({ id: doc.id, ...doc.data() }))
+    .sort((a, b) => a.navn.localeCompare(b.navn))
+   );
 
-      // No date/time/price for komikere — use the first document as-is.
-      setFirstKomiker(list.length > 0 ? list[0] : null);
     }
 
     LoadKomikere();
@@ -35,8 +34,12 @@ export default function Komikerliste() {
           "/img/henrik.png",
         ].map((p) => encodeURI(p))}
       />
-      {firstKomiker ? (
-        <Komikercard key={firstKomiker.id} event={firstKomiker} />
+      {komikere.length > 0 ? (
+        <div className="komikere-grid">
+          {komikere.map((k) => (
+            <Komikercard key={k.id} komiker={k} />
+          ))}
+        </div>
       ) : (
         <p>Ingen komikere fundet</p>
       )}
