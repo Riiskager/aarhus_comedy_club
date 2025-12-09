@@ -1,7 +1,5 @@
 import "../css/eventcard.css";
 
-
-
 export default function Eventcard({ event }) {
   const dateObj =
     event?.dato && typeof event.dato.toDate === "function"
@@ -30,7 +28,16 @@ export default function Eventcard({ event }) {
     time = "";
   }
 
-  
+let displayPris;
+
+if (event.pris === 0) {
+  displayPris = "Gratis";
+} else if (event.pris > 0) {
+  displayPris = `${event.pris} kr.`;
+} else {
+  displayPris = event.pris;
+}
+
 
   return (
     <section className="show">
@@ -45,13 +52,10 @@ export default function Eventcard({ event }) {
       </div>
       <h1 className="event-titel">{event.titel}</h1>
       <p className="event-kort-beskrivelse">{event.kort_beskrivelse}</p>
-      <p className="event-pris">{event.pris}</p>
+      <p className="event-pris">{displayPris}</p>
       <a href="#" className="event-koeb">
-        <b>køb billet</b>
+        <b>{event.koeb}</b>
       </a>
     </section>
   );
-
-  
-
 }
