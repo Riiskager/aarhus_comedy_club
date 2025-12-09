@@ -3,7 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import Eventcard from "../components/eventcard";
 import ForsideKarrusel from "../components/forside-karrusel";
-import Footer from "../components/footer";
+
 
 export default function Forside() {
   const [events, setEvents] = useState([]);
@@ -73,7 +73,6 @@ export default function Forside() {
         <Eventcard key={event.id} event={event} />
       ))}
 
-      <Footer />
     </div>
   );
 }
