@@ -45,7 +45,7 @@ export default function Eventcard({ event }) {
       </div>
       <h1 className="event-titel">{event.titel}</h1>
       <p className="event-kort-beskrivelse">{event.kort_beskrivelse}</p>
-      <p className="event-pris">{displayPris}</p>
+      <p className="event-pris">{event.pris}</p>
       <a href="#" className="event-koeb">
         <b>køb billet</b>
       </a>

@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import Kontakt from './pages/Kontakt'
 import Gavekort from './pages/Gavekort'
 import Footer from './components/footer'
+import BookingInfo from './components/bookinginfo'
 
 function App() {
  
@@ -17,6 +18,7 @@ function App() {
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="*" element={<Forside />} />
         <Route path="/gavekort" element={<Gavekort/>}/>
+        <Route path="/booking" element={<BookingInfo/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
