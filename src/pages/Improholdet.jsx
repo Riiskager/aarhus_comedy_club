@@ -33,7 +33,7 @@ export default function Improholdet(){
                 Når deltagerne er på plads, aftaler vi i fællesskab det tidspunkt og sted, der fungerer bedst. Der vil også være mulighed for at optræde foran publikum, hvis man har lyst.
                  <br/>
                   <br/>
-                   Hvis du gerne vil være med fra starten af, så tilmeld dig <a href="/https://www.youtube.com/watch?v=gbYEZPNflFs">her</a>
+                   Hvis du gerne vil være med fra starten af, så tilmeld dig <a href="https://www.youtube.com/watch?v=gbYEZPNflFs">her</a>
             </p>
             <img src="/img/pas.png"/>
         </div> 

@@ -12,6 +12,7 @@ import Event from './pages/Event'
 import Opret from './pages/Opret'
 import Program from './pages/program'
 import Improholdet from './pages/Improholdet'
+import Omos from './pages/omos'
 
 function App() {
  
@@ -28,6 +29,7 @@ function App() {
         <Route path="/admin" element={<Opret/>}/>
         <Route path="/program" element={<Program/>}/>
         <Route path="/impro-holdet" element={<Improholdet/>}/>
+        <Route path="/historie" element={<Omos/>}/>
 
       </Routes>
       <Footer/>
