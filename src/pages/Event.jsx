@@ -4,7 +4,6 @@ import { db } from "../firebase";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 
-
 export default function EventPage() {
     const { id } = useParams();
     const [event, setEvent] = useState(null)
@@ -29,7 +28,7 @@ export default function EventPage() {
           <div className="billede">
             <h1>Billedet her {id}</h1>
           </div>
-          
+
             <h1 className="titel">{event.titel}</h1>
         
         <div className="sidimidten">

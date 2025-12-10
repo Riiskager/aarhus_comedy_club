@@ -9,6 +9,7 @@ import Footer from './components/footer'
 import BookingInfo from './components/bookinginfo'
 import Komikerliste from './pages/komikerliste'
 import Event from './pages/Event'
+import Opret from './pages/Opret'
 
 function App() {
  
@@ -22,6 +23,8 @@ function App() {
         <Route path="/booking" element={<BookingInfo/>}/>
         <Route path="/komikerliste" element={<Komikerliste/>}/>
         <Route path="/event/:id" element={<Event/>}/>
+        <Route path="/admin" element={<Opret/>}/>
+
       </Routes>
       <Footer/>
     </BrowserRouter>
