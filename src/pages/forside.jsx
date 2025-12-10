@@ -62,20 +62,14 @@ export default function Forside() {
       {}
       <ForsideKarrusel
         images={[
-          "/img/kim.png",
+          "/img/sokkedyr3000.svg",
           "/img/johnny.png",
           "/img/mia.png",
           "/img/pas.png",
           "/img/henrik.png",
         ].map((p) => encodeURI(p))}
       />
-      <div className="banner">
-        <h1>Velkommen</h1>
-        <p></p>
-        <a href="" className="banner-knap">
-          <b>Se events</b>
-        </a>
-      </div>
+
       {events.map((event) => (
         <Eventcard key={event.id} event={event} />
       ))}
