@@ -21,7 +21,7 @@
 
 .altformegetinfo p{
     margin: 2rem 0;
-    width: 80%;
+    width: 90%;
     color: var(--totalmork)
 }
 
@@ -30,7 +30,7 @@
 }
 
 .altformegetinfo img{
-    width: 100%;
+    width: 90%;
     max-width: 404px;
     margin: 2rem 0 0 0 ;
 }
