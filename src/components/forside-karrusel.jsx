@@ -7,7 +7,7 @@ export default function ForsideKarrusel({
   autoPlayInterval = 8000,
 }) {
   const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, _setIsPaused] = useState(false);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
 
@@ -35,15 +35,15 @@ export default function ForsideKarrusel({
   }
 
   // Touch swipe handlers
-  function onTouchStart(e) {
+  function _onTouchStart(e) {
     touchStartX.current = e.touches[0].clientX;
   }
 
-  function onTouchMove(e) {
+  function _onTouchMove(e) {
     touchEndX.current = e.touches[0].clientX;
   }
 
-  function onTouchEnd() {
+  function _onTouchEnd() {
     if (touchStartX.current == null || touchEndX.current == null) return;
 
     const dx = touchStartX.current - touchEndX.current;
@@ -56,24 +56,13 @@ export default function ForsideKarrusel({
     touchEndX.current = null;
   }
 
-  function onKeyDown(e) {
+  function _onKeyDown(e) {
     if (e.key === "ArrowLeft") prev();
     if (e.key === "ArrowRight") next();
   }
 
   return (
-    <div
-      className="karrusel"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
-      onKeyDown={onKeyDown}
-      tabIndex={0}
-    >
+    <div className="karrusel">
       <div className="karrusel-track">
         {images.map((src, i) => (
           <img

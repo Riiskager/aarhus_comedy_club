@@ -3,7 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import Eventcard from "../components/eventcard";
 import ForsideKarrusel from "../components/forside-karrusel";
-
+import "../css/banner.css";
 
 export default function Forside() {
   const [events, setEvents] = useState([]);
@@ -69,10 +69,16 @@ export default function Forside() {
           "/img/henrik.png",
         ].map((p) => encodeURI(p))}
       />
-      {events.slice(0, 6).map((event) => (
+      <div className="banner">
+        <h1>Velkommen</h1>
+        <p></p>
+        <a href="" className="banner-knap">
+          <b>Se events</b>
+        </a>
+      </div>
+      {events.slice(0,6).map((event) => (
         <Eventcard key={event.id} event={event} />
       ))}
-
     </div>
   );
 }

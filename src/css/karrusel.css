@@ -1,8 +1,3 @@
-:root {
-  --k-bg: #000;
-  --k-accent: rgba(255, 255, 255, 0.9);
-}
-
 .karrusel {
   position: relative;
 }

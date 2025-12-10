@@ -4,11 +4,9 @@ import { useState } from 'react';
 export default function BookingInfo(){
     const [openCat, setOpenCat] =useState(false);
 
-
     return(
         <>
         <div className="introtekst">
-           
                 <h1>Book os</h1>
             <div className='toptekst'>
                 <p1>Kunne du have lyst til at booke Aarhus Comedy Club til et event?
