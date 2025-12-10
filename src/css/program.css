@@ -1,0 +1,14 @@
+.programside{
+    display: flex;
+    flex-direction: column;
+}
+
+.overskrift{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem 0;
+    font-family: var(--overskrift);
+    color: var(--totalmork);
+    font-size: 50px;
+    font-weight: 500;
+}

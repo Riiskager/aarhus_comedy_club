@@ -1,0 +1,36 @@
+.impro{
+      font-size: 50px;
+}
+
+.altformegetinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    width: 100%;
+    
+}
+
+.altformegetinfo h1{
+    font-family: var(--overskrift);
+    color: var(--totalmork);
+    font-size: 36px;
+    width: 80%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.altformegetinfo p{
+    margin: 2rem 0;
+    width: 80%;
+    color: var(--totalmork)
+}
+
+.altformegetinfo a{
+    color: var(--totalmork);
+}
+
+.altformegetinfo img{
+    width: 100%;
+    max-width: 404px;
+    margin: 2rem 0 0 0 ;
+}

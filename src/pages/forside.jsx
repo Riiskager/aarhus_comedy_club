@@ -69,8 +69,7 @@ export default function Forside() {
           "/img/henrik.png",
         ].map((p) => encodeURI(p))}
       />
-
-      {events.map((event) => (
+      {events.slice(0,6).map((event) => (
         <Eventcard key={event.id} event={event} />
       ))}
     </div>
