@@ -10,6 +10,7 @@ import BookingInfo from './components/bookinginfo'
 import Komikerliste from './pages/komikerliste'
 import Event from './pages/Event'
 import Opret from './pages/Opret'
+import Program from './pages/program'
 
 function App() {
  
@@ -24,6 +25,7 @@ function App() {
         <Route path="/komikerliste" element={<Komikerliste/>}/>
         <Route path="/event/:id" element={<Event/>}/>
         <Route path="/admin" element={<Opret/>}/>
+        <Route path="/program" element={<Program/>}/>
 
       </Routes>
       <Footer/>

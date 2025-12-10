@@ -24,7 +24,7 @@ export default function BurgerMenu() {
 
    <div className={`menu ${open ? "open" : ""}`}> {/*Tjekker om "open" er sandt, hvis det er, ændrer navn*/}
     <ul>
-        <li className="menuitem"> <a href="/"> Program</a></li>
+        <li className="menuitem"> <a href="/program"> Program</a></li>
         <li onClick={() => setOpenSubmenu(openSubmenu === "komikere" ? null : "komikere")} 
             className={`submenu ${openSubmenu === "komikere" ? "open" : ""}`}> {/*Tjekker om submenu er = komiker, hvis ja, skift navn på denne submenu*/}
             Komikere
