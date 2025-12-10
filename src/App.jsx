@@ -11,6 +11,7 @@ import Komikerliste from './pages/komikerliste'
 import Event from './pages/Event'
 import Opret from './pages/Opret'
 import Program from './pages/program'
+import Improholdet from './pages/Improholdet'
 
 function App() {
  
@@ -26,6 +27,7 @@ function App() {
         <Route path="/event/:id" element={<Event/>}/>
         <Route path="/admin" element={<Opret/>}/>
         <Route path="/program" element={<Program/>}/>
+        <Route path="/impro-holdet" element={<Improholdet/>}/>
 
       </Routes>
       <Footer/>

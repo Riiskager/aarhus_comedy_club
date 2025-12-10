@@ -2,6 +2,7 @@ import Eventcard from "../components/eventcard"
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
+import '../css/program.css'
 
 export default function Program(){
       const [events, setEvents] = useState([]);
@@ -55,7 +56,11 @@ export default function Program(){
         LoadEvents();
       }, []);
     return(
+
         <div className="programside">
+            <h1 className="overskrift">Program</h1>
+
+          
             {events.map((event) => (
                     <Eventcard key={event.id} event={event} />
                   ))}
