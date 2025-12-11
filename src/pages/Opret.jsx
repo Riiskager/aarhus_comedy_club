@@ -54,6 +54,7 @@ export default function Opret(){
             <textarea className="kort_beskrivelse"
             value={kort_beskrivelse}
             placeholder="skriv kort beskrivelse"
+            maxLength={125}
             onChange={(e) => {setKort(e.target.value)
               e.target.style.height = "auto"
               e.target.style.height = e.target.scrollHeight + "px";
