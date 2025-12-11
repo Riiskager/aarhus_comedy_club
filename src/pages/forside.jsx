@@ -60,7 +60,7 @@ export default function Forside() {
   }, []);
 
   return (
-    <div>
+    <div className="forside">
       {}
       <ForsideKarrusel
         images={[
@@ -83,28 +83,40 @@ export default function Forside() {
           <Eventcard key={event.id} event={event} />
         )
       )}
+
+      <a href="/program" className="forside-se-events">
+        <b>Se alle events</b>
+      </a>
+
       <div className="img-overlay">
-        <img src="/img/sort-logo.svg" alt="" className="forside-img" />
+        <img src="/img/acc.webp" alt="" className="forside-img" />
         <div className="overlay">
-          <h1>Aarhus Comedy Club</h1>
-          <p>
-            Comedyklubben af komikere, for komikere, og til alle, der elsker at
-            grine !
-          </p>
-          <a href="/program" className="overlay-btn">
-            <b>Læs om os</b>
-          </a>
+          <div className="overlay-box">
+            <h1>Aarhus Comedy Club</h1>
+            <p>
+              Comedyklubben af komikere, for komikere, og til alle, der elsker
+              at grine !
+            </p>
+            <a href="/booking" className="overlay-btn">
+              <b>Læs om os</b>
+            </a>
+          </div>
         </div>
       </div>
 
       <div className="img-overlay">
         <img src="/img/acc.webp" alt="" className="forside-img" />
         <div className="overlay">
-          <h1>Bliv medlem</h1>
-          <p>Få nyheder og tilbud</p>
-          <a href="/tilmeld" className="overlay-btn">
-            <b>Tilmeld</b>
-          </a>
+          <div className="overlay-box">
+            <h1>Bliv medlem</h1>
+            <p>
+              Udforsk de forskellige muligheder ud har for at booke aarhus
+              comedyclub herinde
+            </p>
+            <a href="/booking" className="overlay-btn">
+              <b>Book os</b>
+            </a>
+          </div>
         </div>
       </div>
     </div>
