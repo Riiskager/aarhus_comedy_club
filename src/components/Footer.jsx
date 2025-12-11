@@ -28,20 +28,20 @@ export default function Footer() {
         </p>
       </div>
       <div className="footer-navigering">
-        <a href="#">
+        <a href="/Kontakt">
           {" "}
           <b>Kontakt</b>
         </a>
-        <a href="#">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
           {" "}
           <b>Nyhedsbrev</b>
         </a>
-        <a href="#">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
           <b>F.A.Q</b>
         </a>
       </div>
       <div className="footer-navigering">
-        <a href="#">
+        <a href="/gavekort">
           <b>Gavekort</b>
         </a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
