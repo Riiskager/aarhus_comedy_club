@@ -27,3 +27,19 @@
     font-size: 20px;
     padding: 0.25rem 1rem;
 }
+.opretEvent textarea{
+    border-radius: 10px;
+    border: 2px solid var(--morkebrun);
+    height: 3rem;
+    margin: 1rem;
+    font-size: 20px;
+    padding: 0.25rem 1rem;
+}
+
+textarea {
+  min-height: 3rem;      /* startstørrelse */
+  max-height: 15rem;     /* maks hvor meget den kan vokse */
+  overflow-y: auto;      /* viser scroll hvis indhold overstiger max-height */
+  resize: none;          /* optional: forhindrer manuel resizing */
+  white-space: pre-line;
+}

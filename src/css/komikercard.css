@@ -23,6 +23,7 @@
   height: 10rem;
   border-radius: 5px;
   display: block;
+  object-fit: cover;
 }
 .komiker-social {
   height: 35px;
