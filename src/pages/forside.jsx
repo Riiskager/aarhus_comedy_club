@@ -62,11 +62,13 @@ export default function Forside() {
       {}
       <ForsideKarrusel
         images={[
-          "/img/sokkedyr3000.svg",
-          "/img/johnny.png",
-          "/img/mia.png",
-          "/img/pas.png",
-          "/img/henrik.png",
+          "/img/sokkedyr-slider.svg",
+          "/img/program.png",
+          "/img/komikere.png",
+          "/img/gavekort.png",
+          "/img/om-os.png",
+          "/img/booking.png",
+          "/img/kontakt.png",
         ].map((p) => encodeURI(p))}
       />
       {events.slice(0,6).map((event) => (
