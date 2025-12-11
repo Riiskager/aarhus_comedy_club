@@ -56,7 +56,7 @@ export default function ForsideKarrusel({
   };
 
   const buttons = {
-    "sokkedyr-slider": { label: "Se event", href: "/events" },
+    "sokkedyr-slider": { label: "Se event", href: "" },
     sokkedyr3000: { label: "Se event", href: "/events" },
     program: { label: "Se event", href: "/events" },
     komikere: { label: "Se komikere", href: "/komikerliste" },
@@ -69,6 +69,21 @@ export default function ForsideKarrusel({
   const filename = images[index]?.split("/").pop().split(".")[0];
   const title = titles[filename] || "";
   const button = buttons[filename] || { label: "Se events", href: "/events" };
+
+  const handleBannerClick = (e) => {
+    // If this is the sokkedyr slide, scroll to the first event on the page
+    if (filename === "sokkedyr-slider") {
+      e.preventDefault();
+      const el = document.getElementById("first-event");
+      if (el) {
+        const offset = 20; // pixels to offset from top
+        const top =
+          el.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+    // otherwise let the anchor behave normally
+  };
 
   return (
     <div
@@ -91,7 +106,11 @@ export default function ForsideKarrusel({
 
       <div className="banner">
         <h1>{title}</h1>
-        <a href={button.href} className="banner-knap">
+        <a
+          href={button.href}
+          className="banner-knap"
+          onClick={handleBannerClick}
+        >
           <b>{button.label}</b>
         </a>
       </div>
