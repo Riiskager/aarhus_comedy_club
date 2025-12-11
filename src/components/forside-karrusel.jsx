@@ -4,71 +4,85 @@ import "../css/karrusel.css";
 export default function ForsideKarrusel({
   images = [],
   autoPlay = true,
-  autoPlayInterval = 8000,
+  autoPlayInterval = 30000,
 }) {
   const [index, setIndex] = useState(0);
-  const [isPaused, _setIsPaused] = useState(false);
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
 
   // Autoplay
   useEffect(() => {
-    if (!autoPlay || images.length <= 1 || isPaused) return;
+    if (!autoPlay || images.length <= 1) return;
 
     const id = setInterval(() => {
       setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
     }, autoPlayInterval);
 
     return () => clearInterval(id);
-  }, [autoPlay, autoPlayInterval, images.length, isPaused]);
+  }, [autoPlay, autoPlayInterval, images.length]);
 
-  if (!images || images.length === 0) {
-    return <div className="karrusel karrusel-empty">Ingen billeder</div>;
-  }
+  const prev = () => setIndex((i) => (i === 0 ? images.length - 1 : i - 1));
 
-  function prev() {
-    setIndex((i) => (i === 0 ? images.length - 1 : i - 1));
-  }
+  const next = () => setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
 
-  function next() {
-    setIndex((i) => (i === images.length - 1 ? 0 : i + 1));
-  }
-
-  // Touch swipe handlers
-  function _onTouchStart(e) {
+  // Swipe
+  const onTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
-  }
+  };
 
-  function _onTouchMove(e) {
+  const onTouchMove = (e) => {
     touchEndX.current = e.touches[0].clientX;
-  }
+  };
 
-  function _onTouchEnd() {
-    if (touchStartX.current == null || touchEndX.current == null) return;
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
 
     const dx = touchStartX.current - touchEndX.current;
-    const threshold = 40;
-
-    if (dx > threshold) next();
-    else if (dx < -threshold) prev();
+    if (dx > 40) next();
+    if (dx < -40) prev();
 
     touchStartX.current = null;
     touchEndX.current = null;
-  }
+  };
 
-  function _onKeyDown(e) {
-    if (e.key === "ArrowLeft") prev();
-    if (e.key === "ArrowRight") next();
-  }
+  const titles = {
+    "sokkedyr-slider": "Velkommen",
+    program: "Program",
+    komikere: "Komikere",
+    gavekort: "Gavekort",
+    "om-os": "Om os",
+    booking: "Booking",
+    kontakt: "Kontakt",
+  };
+
+  const buttons = {
+    "sokkedyr-slider": { label: "Se event", href: "/events" },
+    sokkedyr3000: { label: "Se event", href: "/events" },
+    program: { label: "Se event", href: "/events" },
+    komikere: { label: "Se komikere", href: "/komikerliste" },
+    gavekort: { label: "Køb gavekort", href: "/gavekort" },
+    "om-os": { label: "Læs om os", href: "/historie" },
+    booking: { label: "Book os", href: "/booking" },
+    kontakt: { label: "Kontakt os", href: "/Kontakt" },
+  };
+
+  const filename = images[index]?.split("/").pop().split(".")[0];
+  const title = titles[filename] || "";
+  const button = buttons[filename] || { label: "Se events", href: "/events" };
 
   return (
-    <div className="karrusel">
+    <div
+      className="karrusel"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <div className="karrusel-track">
         {images.map((src, i) => (
           <img
             key={i}
             src={src}
-            alt={`Slide ${i + 1}`}
+            alt=""
             className={i === index ? "karrusel-slide active" : "karrusel-slide"}
             style={{ display: i === index ? "block" : "none" }}
           />
@@ -76,32 +90,19 @@ export default function ForsideKarrusel({
       </div>
 
       <div className="banner">
-        <h1>Velkommen</h1>
-        <p></p>
-        <a href="" className="banner-knap">
-          <b>Se events</b>
+        <h1>{title}</h1>
+        <a href={button.href} className="banner-knap">
+          <b>{button.label}</b>
         </a>
       </div>
 
-      <button
-        className="karrusel-arrow left"
-        onClick={prev}
-        aria-label="Forrige"
-      >
+      <button className="karrusel-arrow left" onClick={prev}>
         ‹
       </button>
 
-      <button
-        className="karrusel-arrow right"
-        onClick={next}
-        aria-label="Næste"
-      >
+      <button className="karrusel-arrow right" onClick={next}>
         ›
       </button>
     </div>
-
-
   );
-  
 }
-
