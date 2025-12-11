@@ -54,7 +54,7 @@ if (event.pris === 0) {
       <p className="event-kort-beskrivelse">{event.kort_beskrivelse}</p>
       <p className="event-pris">{displayPris}</p>
       <a href={`/event/${event.id}`} key={event.id}className="event-koeb">
-        <b>{event.koeb}</b>
+        <b>Køb billet</b>
       </a>
     </section>
   );
