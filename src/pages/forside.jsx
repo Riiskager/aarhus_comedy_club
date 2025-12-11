@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import Eventcard from "../components/eventcard";
 import ForsideKarrusel from "../components/forside-karrusel";
 import "../css/banner.css";
+import "../css/forside.css";
 
 export default function Forside() {
   const [events, setEvents] = useState([]);
@@ -22,7 +23,8 @@ export default function Forside() {
       const toMillis = (d) => {
         try {
           if (!d) return NaN;
-          const date = typeof d.toDate === "function" ? d.toDate() : new Date(d);
+          const date =
+            typeof d.toDate === "function" ? d.toDate() : new Date(d);
           const t = date instanceof Date ? date.getTime() : NaN;
           return isNaN(t) ? NaN : t;
         } catch {
@@ -71,9 +73,40 @@ export default function Forside() {
           "/img/kontakt.png",
         ].map((p) => encodeURI(p))}
       />
-      {events.slice(0,6).map((event) => (
-        <Eventcard key={event.id} event={event} />
-      ))}
+      <h1 className="forside-overskrift">Kommende events</h1>
+      {events.slice(0, 6).map((event, idx) =>
+        idx === 0 ? (
+          <div id="first-event" key={event.id}>
+            <Eventcard event={event} />
+          </div>
+        ) : (
+          <Eventcard key={event.id} event={event} />
+        )
+      )}
+      <div className="img-overlay">
+        <img src="/img/sort-logo.svg" alt="" className="forside-img" />
+        <div className="overlay">
+          <h1>Aarhus Comedy Club</h1>
+          <p>
+            Comedyklubben af komikere, for komikere, og til alle, der elsker at
+            grine !
+          </p>
+          <a href="/program" className="overlay-btn">
+            <b>Læs om os</b>
+          </a>
+        </div>
+      </div>
+
+      <div className="img-overlay">
+        <img src="/img/acc.webp" alt="" className="forside-img" />
+        <div className="overlay">
+          <h1>Bliv medlem</h1>
+          <p>Få nyheder og tilbud</p>
+          <a href="/tilmeld" className="overlay-btn">
+            <b>Tilmeld</b>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
