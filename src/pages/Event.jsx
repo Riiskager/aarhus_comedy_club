@@ -23,10 +23,13 @@ export default function EventPage() {
     },[id]) 
 
     if (!event) return <p>Loading...</p>;
+
+    
+
     return (
         <div className="eventside">
           <div className="billede">
-            <h1>Billedet her {id}</h1>
+            <img src={event.img} alt={event.id}/>
           </div>
 
             <h1 className="titel">{event.titel}</h1>
