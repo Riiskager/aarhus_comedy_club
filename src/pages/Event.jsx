@@ -63,12 +63,15 @@ export default function EventPage() {
  if (!event) return <p>Loading...</p>;
     return (
         <div className="eventside">
+          
           <div className="billede">
             <img src={event.img} alt={event.id}/>
           </div>
 
-            <h1 className="titel">{event.titel}</h1>
-        
+          <div className="titel">
+          <h1>{event.titel}</h1>
+          </div>
+
         <div className="sidimidten">
           <button className="knappen"><a href='/køb'>Køb her</a></button>
         </div>
@@ -76,15 +79,15 @@ export default function EventPage() {
            <div className="info">
             <p>Her <br/>dør åbner</p>
             <p>Her <br/>fest starter</p>
-            <p>Her <br/>{event.pris}</p>
+            <p>Pris: <br/>{event.pris}kr,-</p>
             </div>
           
-            <p>{event.kort_beskrivelse}</p>
-          
+            <p className="beskrivelse">{event.lang_beskrivelse}</p>
+          <img className="stemningsbillede" src={event.stemningsbillede}></img>
             {eventKomikere.length > 0 && (
   <>
-              <h2>Komikere der optræder:</h2>
-              <div className="komikere-grid">
+              <h2 className="komikeroverskrift">Komikere</h2>
+              <div className="komikerstyling">
                 {eventKomikere.map(k => (
                   <Komikercard key={k.id} komiker={k} />
                 ))}

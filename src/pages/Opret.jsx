@@ -51,15 +51,27 @@ export default function Opret(){
             placeholder="skriv titel"
             onChange={(e) => setTitle(e.target.value)}></input>
 
-            <input className="kort_beskrivelse"
+            <textarea className="kort_beskrivelse"
             value={kort_beskrivelse}
             placeholder="skriv kort beskrivelse"
-            onChange={(e) => setKort(e.target.value)}></input>
+            onChange={(e) => {setKort(e.target.value)
+              e.target.style.height = "auto"
+              e.target.style.height = e.target.scrollHeight + "px";
+            }}
+            >
+
+            </textarea>
             
-            <input className="lang_beskrivelse"
+            <textarea className="lang_beskrivelse"
             value={lang_beskrivelse}
             placeholder="skriv lang beskrivelse"
-            onChange={(e) => setLang(e.target.value)}></input>
+            onChange={(e) => { setLang(e.target.value)
+               e.target.style.height = "auto"
+              e.target.style.height = e.target.scrollHeight + "px";
+            
+            }}>
+
+            </textarea>
            
             <input className="img"
             value={img}
