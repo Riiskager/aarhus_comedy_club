@@ -75,6 +75,14 @@ export default function ForsideKarrusel({
         ))}
       </div>
 
+      <div className="banner">
+        <h1>Velkommen</h1>
+        <p></p>
+        <a href="" className="banner-knap">
+          <b>Se events</b>
+        </a>
+      </div>
+
       <button
         className="karrusel-arrow left"
         onClick={prev}
@@ -91,5 +99,9 @@ export default function ForsideKarrusel({
         ›
       </button>
     </div>
+
+
   );
+  
 }
+
