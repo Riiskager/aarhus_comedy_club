@@ -77,7 +77,7 @@ export default function Karrusel({
 
       <div className="banner">
         <h1>Velkommen</h1>
-        <p className="komiker-banner-tekst">
+        <p className="banner-tekst">
           Her ser du en liste af de komikere du kan forventer på Aarhus
           Comedyclub
         </p>

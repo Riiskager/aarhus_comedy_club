@@ -6,7 +6,7 @@ export default function Improholdet(){
           <img className="om-os-img" src="/img/om-os.png" alt="" />
          <div className="banner">
         <h1 className="impro">Vores Historie</h1>
-        <p>Læs om hvordan Aarhus ComedyClub blev til! </p>
+        <p className="banner-tekst">Læs om hvordan Aarhus ComedyClub blev til! </p>
       </div>
         <div className="altformegetinfo">
              <h1>Historien om os</h1>
