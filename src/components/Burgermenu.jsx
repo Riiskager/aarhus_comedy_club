@@ -40,8 +40,8 @@ export default function BurgerMenu() {
         <ul className={`submenuitemb ${openSubmenu === "booking" ? "open" : ""}`}>
             <li className="komikerliste"><a href="/komikerliste">Komikere</a></li>
             <li className="bookings"><a href="/booking">Julefrokost</a></li>
-            <li className="bookings"><a href="/booking">Lej lokalet</a></li>
-            <li className="bookings"><a href="/booking">Book os</a></li>
+            <li className="bookings"><a href="/booking">Firma-comedy</a></li>
+            <li className="bookings"><a href="/booking">Lej lokale</a></li>
         </ul>
          </li>
         <li onClick={() => setOpenSubmenu(openSubmenu === "omos" ? null : "omos")}
