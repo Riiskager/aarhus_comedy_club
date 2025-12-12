@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
       <a href="/" aria-label="Forside">
         <img
-          src="/img/Logo.svg"
+          src="public/img/Logo.svg"
           alt="Aarhus Comedy Club logo"
           className="logo-footer"
         />
