@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import Komikercard from "../components/komikercard";
-import ForsideKarrusel from "../components/forside-karrusel";
+import KomikerKarrusel from "../components/komikerkarrusel";
 
 export default function Komikerliste() {
   const [komikere, setKomikere] = useState([]);
@@ -25,7 +25,7 @@ export default function Komikerliste() {
 
   return (
     <div>
-      <ForsideKarrusel
+      <KomikerKarrusel
         images={[
           "/img/kim.png",
           "/img/johnny.png",

@@ -19,19 +19,44 @@ export default function Forside() {
         ...doc.data(),
       }));
 
-const sorted = list.sort((a, b) => {
-  const aTime = a.dato?.toDate
-    ? a.dato.toDate().getTime()
-    : new Date(a.dato).getTime();
-  const bTime = b.dato?.toDate
-    ? b.dato.toDate().getTime()
-    : new Date(b.dato).getTime();
+      const toMillis = (d) => {
+        try {
+          if (!d) return NaN;
+          if (typeof d?.toDate === "function") return d.toDate().getTime();
+          if (typeof d === "number") return d < 1e11 ? d * 1000 : d;
+          if (typeof d === "string") {
+            const dm = d.match(/^\s*(\d{1,2})\/(\d{1,2})\/(\d{4})\s*$/);
+            if (dm) {
+              const day = Number(dm[1]);
+              const month = Number(dm[2]) - 1;
+              const year = Number(dm[3]);
+              return new Date(year, month, day).getTime();
+            }
+            const p = Date.parse(d);
+            return isNaN(p) ? NaN : p;
+          }
+          // (no seconds-object handling required for this project)
+          return NaN;
+        } catch {
+          return NaN;
+        }
+      };
 
-  return aTime - bTime;
-});
+      const now = Date.now();
+      const enriched = list.map((e) => ({ ...e, _ts: toMillis(e.dato) }));
+      const upcoming = enriched
+        .filter((e) => !isNaN(e._ts) && e._ts >= now)
+        .sort((a, b) => a._ts - b._ts);
 
-      console.log("loaded events (sorted)", sorted);
-      setEvents(sorted);
+      console.log(
+        "loaded upcoming events (enriched)",
+        upcoming.map((e) => ({
+          id: e.id,
+          _ts: e._ts,
+          iso: new Date(e._ts).toISOString(),
+        }))
+      );
+      setEvents(upcoming);
     }
 
     LoadEvents();

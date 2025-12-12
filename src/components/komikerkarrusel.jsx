@@ -77,29 +77,12 @@ export default function Karrusel({
 
       <div className="banner">
         <h1>Velkommen</h1>
-        <a href="" className="banner-knap">
-          <b>Se events</b>
-        </a>
+        <p className="komiker-banner-tekst">
+          Her ser du en liste af de komikere du kan forventer på Aarhus
+          Comedyclub
+        </p>
       </div>
-
-      <button
-        className="karrusel-arrow left"
-        onClick={prev}
-        aria-label="Forrige"
-      >
-        ‹
-      </button>
-
-      <button
-        className="karrusel-arrow right"
-        onClick={next}
-        aria-label="Næste"
-      >
-        ›
-      </button>
     </div>
-
-
   );
   
 }
