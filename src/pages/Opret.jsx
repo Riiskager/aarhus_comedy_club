@@ -15,12 +15,15 @@ export default function Opret(){
     const [img, setImg] = useState("");
     const [pris, setPris] = useState("");
     const [stemningsbillede, setStemImg] = useState("")
-    const [dato, setDato] = useState("")        
-   
-    const [komikere, setKomikere] = useState([]) 
-    const [valgKomiker, setValgKomiker] = useState([])      
-
-    
+    const [dato, setDato] = useState("")
+    const [komikere, setKomikere] = useState([])
+    const [valgKomiker, setValgKomiker] = useState([])
+    const [navn, setNavn] = useState("");
+    const [beskrivelse, setBeskrivelse] = useState("");
+    const [imgage, setImgage] = useState("");
+    const [instagram, setInstagram] = useState("");
+    const [facebook, setFacebook] = useState("");
+    const [booking, setBooking] = useState("");
 
       async function hentKomikere() {
   const komikerRef = collection(db, "komikere"); // collection navn
@@ -62,6 +65,24 @@ export default function Opret(){
 
 
         const eventRef = doc(db, "events");
+    await updateDoc(eventRef, {
+  events: arrayUnion(newEventRef.id),
+});
+    }
+    async function HandleSubmitKomiker(k){
+        k.preventDefault()
+
+        const newEventRef = await addDoc(collection(db, "komikere"), {
+            navn,
+            beskrivelse,
+            imgage,
+            instagram,
+            facebook,
+            booking
+        }) 
+
+
+        const eventRef = doc(db, "komikere");
     await updateDoc(eventRef, {
   events: arrayUnion(newEventRef.id),
 });
@@ -130,7 +151,6 @@ export default function Opret(){
               value={dato} 
               onChange={(e) => setDato(e.target.value)} 
             />
-          
 
             <label>Vælg komikere</label>
             <Select
@@ -146,6 +166,65 @@ export default function Opret(){
               /> 
               <div className="opretknap">
            <button type="submit">Opret Event</button>
+           </div> 
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+        <form className="opretEvent" onSubmit={HandleSubmitKomiker}>
+            <h1>Opret komiker!</h1>
+            <label>Navn</label>
+            <input className="title"
+            value={navn}
+            placeholder="skriv navn"
+            onChange={(k) => setNavn(k.target.value)}></input>
+
+            <label>Beskrivelse</label>
+            <textarea className="kort_beskrivelse"
+            value={beskrivelse}
+            placeholder="skriv kort beskrivelse"
+            maxLength={125}
+            onChange={(k) => {setBeskrivelse(k.target.value);
+              k.target.style.height = "auto"
+              k.target.style.height = k.target.scrollHeight + "px";
+            }}
+            >
+            </textarea>
+
+           <label>Billedelink</label>
+            <input className="img"
+            value={imgage}
+            placeholder="indsæt billedelink"
+            onChange={(k) => setImgage(k.target.value)}></input>
+
+           <label>Instagram link</label>
+            <input className="img"
+            value={instagram}
+            placeholder="indsæt Instagram link"
+            onChange={(k) => setInstagram(k.target.value)}></input>
+
+           <label>Facebook link</label>
+            <input className="img"
+            value={facebook}
+            placeholder="indsæt Facebook link"
+            onChange={(k) => setFacebook(k.target.value)}></input>
+
+           <label>Eventzone link</label>
+            <input className="img"
+            value={booking}
+            placeholder="indsæt Eventzone link"
+            onChange={(k) => setBooking(k.target.value)}></input>
+
+              <div className="opretknap">
+           <button type="submit">Opret Komiker</button>
            </div> 
         </form>
         </>
