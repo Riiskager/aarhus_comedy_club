@@ -28,20 +28,19 @@ export default function Eventcard({ event }) {
     time = "";
   }
 
-let displayPris;
+  let displayPris;
 
-if (event.pris === 0) {
-  displayPris = "Gratis";
-} else if (event.pris > 0) {
-  displayPris = `${event.pris} kr.`;
-} else {
-  displayPris = event.pris;
-}
-
+  if (event.pris === 0) {
+    displayPris = "Gratis";
+  } else if (event.pris > 0) {
+    displayPris = `${event.pris} kr.`;
+  } else {
+    displayPris = event.pris;
+  }
 
   return (
     <section className="show">
-      <img src="/img/jcb.png" alt={event.titel} className="event-img" />
+      <img src={event.img} alt={event.titel} className="event-img" />
       <div className="event-dato">
         <span className="dato-weekday">{weekday}</span>
         <span className="dato-day">{day}</span>
@@ -53,7 +52,7 @@ if (event.pris === 0) {
       <h1 className="event-titel">{event.titel}</h1>
       <p className="event-kort-beskrivelse">{event.kort_beskrivelse}</p>
       <p className="event-pris">{displayPris}</p>
-      <a href={`/event/${event.id}`} key={event.id}className="event-koeb">
+      <a href={`/event/${event.id}`} key={event.id} className="event-koeb">
         <b>Køb billet</b>
       </a>
     </section>
