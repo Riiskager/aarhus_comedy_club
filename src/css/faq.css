@@ -1,0 +1,42 @@
+.faqside{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.faqside h1{
+    color: var(--totalmork);
+}
+
+.faqside p{
+     color: var(--totalmork);
+     font-family: var(--broed);
+     margin-bottom: 2rem;
+}
+.faqside a{
+     color: var(--totalmork);
+     font-family: var(--broed);
+     font-size: 20px;
+}
+.faqting{
+    background-color: var(--lysbeige);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.faqside h2{
+    font-family: var(--broed);
+    color: var(--morkebrun);
+    width: 90%;
+    background-color: var(--lysbeige);
+    margin: 1rem 0;
+    border: 2px solid var(--morkebrun);
+    border-radius: 10px;
+    padding: 0.25rem;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+}

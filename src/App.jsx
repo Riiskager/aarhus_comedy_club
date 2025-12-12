@@ -14,6 +14,8 @@ import Program from './pages/program'
 import Improholdet from './pages/Improholdet'
 import Omos from './pages/omos'
 import Betal from './pages/Betal'
+import Bekræft from './pages/bekaeft'
+import Faq from './pages/faq'
 
 function App() {
  
@@ -32,6 +34,8 @@ function App() {
         <Route path="/impro-holdet" element={<Improholdet/>}/>
         <Route path="/historie" element={<Omos/>}/>
         <Route path="/betaling" element={<Betal/>}/>
+        <Route path="/bekræft" element={<Bekræft/>}/>
+        <Route path="/faq" element={<Faq/>}/>
 
       </Routes>
       <Footer/>

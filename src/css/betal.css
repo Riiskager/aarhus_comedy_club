@@ -1,0 +1,37 @@
+.betalingside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.betalbesked{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.betalbesked h2{
+    font-family: var(--overskrift);
+    color: var(--totalmork);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.betalbesked p{
+    margin-top: 2rem;
+    font-family: var(--broed);
+    color: var(--totalmork);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/*Til bekræftigelsesside*/
+.betalbesked a{
+    color: var(--totalmork);
+}
+
+.betalbesked h1{
+    color: var(--totalmork);
+
+}
+
