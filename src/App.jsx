@@ -13,6 +13,7 @@ import Opret from './pages/Opret'
 import Program from './pages/program'
 import Improholdet from './pages/Improholdet'
 import Omos from './pages/omos'
+import Betal from './pages/Betal'
 
 function App() {
  
@@ -30,6 +31,7 @@ function App() {
         <Route path="/program" element={<Program/>}/>
         <Route path="/impro-holdet" element={<Improholdet/>}/>
         <Route path="/historie" element={<Omos/>}/>
+        <Route path="/betaling" element={<Betal/>}/>
 
       </Routes>
       <Footer/>
