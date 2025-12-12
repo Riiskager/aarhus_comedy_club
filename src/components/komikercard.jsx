@@ -6,7 +6,7 @@ export default function Komikercard({ komiker }) {
 
   return (
     <section className="komiker">
-      <img src={imgSrc} alt={komiker?.img || ""} className="komiker-img" />
+      <img src={imgSrc} alt={komiker?.imgage || ""} className="komiker-img" />
       <h1 className="komiker-titel">{komiker?.navn}</h1>
       <p className="komiker-beskrivelse">{komiker?.beskrivelse}</p>
       <div className="komiker-blaa">
