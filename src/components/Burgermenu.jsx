@@ -59,7 +59,7 @@ export default function BurgerMenu() {
     </ul>   
     <a href="/" aria-label="Forside">
         <img
-          src="/img/Logo.svg"
+          src="public/img/Logo.svg"
           alt="Aarhus Comedy Club logo"
           className="logoheader"
         />
