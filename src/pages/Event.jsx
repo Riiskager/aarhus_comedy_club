@@ -4,12 +4,14 @@ import { db } from "../firebase";
 import { useEffect, useState } from "react";
 import { doc, getDoc, collection, getDocs } from "firebase/firestore";
 import Komikercard from "../components/komikercard";
+import { useNavigate } from "react-router";
 
 export default function EventPage() {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
   const [komikere, setKomikere] = useState([]);
   const [eventKomikere, setEventKomikere] = useState([]);
+  const navigate = useNavigate();
 
   const dateObj =
     event?.dato && typeof event.dato.toDate === "function"
@@ -65,6 +67,14 @@ function formatDoor(event) {
 
   if (!event) return <p>Loading...</p>;
 
+  
+    async function sendBillet(){
+      localStorage.setItem("billetpris",event.pris)
+      localStorage.setItem("event", event.titel)
+      navigate("/betaling")
+    }
+
+
   return (
     <div className="eventside">
       <div className="billede">
@@ -76,8 +86,8 @@ function formatDoor(event) {
       </div>
 
       <div className="sidimidten">
-        <button className="knappen">
-          <a href="/køb">Køb her</a>
+        <button className="knappen" onClick={sendBillet}>
+          <a>Køb her</a>
         </button>
       </div>
 
