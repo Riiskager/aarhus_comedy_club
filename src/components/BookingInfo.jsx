@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export default function BookingInfo(){
     const [openCat, setOpenCat] =useState(false);
-
+//Ret simpelt, det eneste fancy er onclick, der ændrer navn, så man kan animere at det åbner
     return(
         <>
         <div className="introtekst">

@@ -18,23 +18,23 @@ export default function Betal(){
     
 
     let checkoutProdukt;
-    //gavekortMail er bare en specifik mail, så script kan se forskel på produkter
+    //gavekortMail er bare en specifik mail, så script kan se forskel på produkter, fordi events ikke har mail tilkoblet
     if (localStorage.getItem("gavekortMail")) {
-    checkoutProdukt = {
+    checkoutProdukt = { //sætter produkter til en liste af de her ting
         type: "gavekort",
         pris,
         mail,
         besked
     };
     } else{
-        checkoutProdukt ={
+        checkoutProdukt ={ //Ellers er det et event og har de her ting
             type: "event",
             billetpris,
             event
         }
     }
 
-    async function betal(e){
+    async function betal(e){ //"Betalingsfunktion" tilføjer bare det valgte gavekort, og fjerner data
         e.preventDefault();
 
         await addDoc(collection(db, "gavekort"), {
@@ -46,6 +46,8 @@ export default function Betal(){
     localStorage.removeItem("gavekortPris");
     localStorage.removeItem("gavekortMail");
     localStorage.removeItem("gavekortBesked");
+    localStorage.removeItem("billetpris");
+    localStorage.removeItem("event");
 
     navigate("/bekræft")
     }

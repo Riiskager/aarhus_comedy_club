@@ -8,7 +8,7 @@ import Select from "react-select";
 
 
 export default function Opret(){
-    //Konstanter til eventform
+    //Konstanter til eventform, én for hvert inputfelt
     const [titel, setTitle] = useState("");
     const [kort_beskrivelse, setKort] =useState("");
     const [lang_beskrivelse, setLang] = useState("");
@@ -17,6 +17,8 @@ export default function Opret(){
     const [stemningsbillede, setStemImg] = useState("")
     const [dato, setDato] = useState("")
     const [komikere, setKomikere] = useState([])
+
+    //konstanter til komikere
     const [valgKomiker, setValgKomiker] = useState([])
     const [navn, setNavn] = useState("");
     const [beskrivelse, setBeskrivelse] = useState("");
@@ -49,7 +51,7 @@ export default function Opret(){
     doorObj.setHours(doorObj.getHours() - 1);
 
     async function HandleSubmit(e){
-        e.preventDefault()
+        e.preventDefault() 
 
         const newEventRef = await addDoc(collection(db, "events"), {
             titel,
@@ -67,6 +69,10 @@ export default function Opret(){
         const eventRef = doc(db, "events");
     await updateDoc(eventRef, {
   events: arrayUnion(newEventRef.id),
+
+  //Her kunne man godt genstarte alle konstanterne, 
+  // men hvis man skal lave præcis den samme event igen på samme dag
+  // så skal man bare ændre datoen
 });
     }
     async function HandleSubmitKomiker(k){

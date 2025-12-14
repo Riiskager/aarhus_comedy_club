@@ -7,11 +7,12 @@ export default function Kontakt(){
     //Til redirect for admin, oprettelse af events and such
     const [counter, setCounter] = useState(0)
     const navigate = useNavigate("") //Det her var det eneste jeg havde brug for hjælp til, be proud O.o
+    
     function adminLogin(){
         setCounter(counter + 1);
         console.log(counter);
 
-        if(counter > 5){
+        if(counter > 5){ //Hvis counteren er højere end 5, naviger
             navigate('/admin')
         }
     }
@@ -20,8 +21,9 @@ export default function Kontakt(){
     return(
         <>
         <div className="introtekst">
-           
-                <h1 onClick={adminLogin}>Kontakt os</h1>
+           {/* Det kan tilføjes på mange forskellige måder
+           Men her er admin login */}
+                <h1 onClick={adminLogin}>Kontakt os</h1> 
             <div className='toptekst'>
                 <p>Sidder du med et spørgsmål som vores hjemmeside ikke har svaret på? <br/>
                 Udfyld formularen herunder!
