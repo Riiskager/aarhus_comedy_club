@@ -22,7 +22,7 @@ export default function Opret(){
     const [valgKomiker, setValgKomiker] = useState([])
     const [navn, setNavn] = useState("");
     const [beskrivelse, setBeskrivelse] = useState("");
-    const [imgage, setImgage] = useState("");
+    const [image, setimage] = useState("");
     const [instagram, setInstagram] = useState("");
     const [facebook, setFacebook] = useState("");
     const [booking, setBooking] = useState("");
@@ -81,7 +81,7 @@ export default function Opret(){
         const newEventRef = await addDoc(collection(db, "komikere"), {
             navn,
             beskrivelse,
-            imgage,
+            img,
             instagram,
             facebook,
             booking
@@ -207,9 +207,9 @@ export default function Opret(){
 
            <label>Billedelink</label>
             <input className="img"
-            value={imgage}
+            value={image}
             placeholder="indsæt billedelink"
-            onChange={(k) => setImgage(k.target.value)}></input>
+            onChange={(k) => setimage(k.target.value)}></input>
 
            <label>Instagram link</label>
             <input className="img"

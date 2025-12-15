@@ -1,12 +1,12 @@
 import "../css/komikercard.css";
 
 export default function Komikercard({ komiker }) {
-  const imgSrc = komiker?.img;
+  const imgSrc = komiker?.image;
 
 
   return (
     <section className="komiker">
-      <img src={imgSrc} alt={komiker?.imgage || ""} className="komiker-img" />
+      <img src={imgSrc} alt={komiker?.image || ""} className="komiker-img" />
       <h1 className="komiker-titel">{komiker?.navn}</h1>
       <p className="komiker-beskrivelse">{komiker?.beskrivelse}</p>
       <div className="komiker-blaa">
