@@ -4,6 +4,9 @@ export default function Komikercard({ komiker }) {
   const imgSrc = komiker?.img;
 
 
+  // Da vi har lavet en formular som ejeren af klubben selv skal udfylde,
+  // henter vi bare denne info direkte fra databasen og displayer den i komiker kortet.
+
   return (
     <section className="komiker">
       <img src={imgSrc} alt={komiker?.imgage || ""} className="komiker-img" />

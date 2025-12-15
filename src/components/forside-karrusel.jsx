@@ -4,7 +4,8 @@ import "../css/karrusel.css";
 export default function ForsideKarrusel({
   images = [],
   autoPlay = true,
-  autoPlayInterval = 30000,
+  // default interval reduced from 30s to 8s for snappier carousel
+  autoPlayInterval = 4000,
 }) {
   const [index, setIndex] = useState(0);
   const touchStartX = useRef(null);
