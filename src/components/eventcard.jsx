@@ -1,41 +1,36 @@
 import "../css/eventcard.css";
 
 export default function Eventcard({ event }) {
+  // Lav et Date-objekt ud fra `event.dato`.
+  // Hvis det er en Firestore Timestamp, brug .toDate(), ellers brug værdien direkte.
   const dateObj =
     event?.dato && typeof event.dato.toDate === "function"
       ? event.dato.toDate()
-      : new Date(event?.dato);
+      : event?.dato;
 
   let weekday = "";
   let day = "";
   let time = "";
   let month = "";
-  try {
-    weekday = dateObj.toLocaleDateString("da-DK", { weekday: "short" });
-    month = dateObj.toLocaleDateString("da-DK", { month: "short" });
-    day = dateObj.getDate();
-    time = dateObj.toLocaleTimeString("da-DK", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
+  // Formater dato og tid til dansk visning.
+  weekday = dateObj.toLocaleDateString("da-DK", { weekday: "short" });
+  month = dateObj.toLocaleDateString("da-DK", { month: "short" });
+  day = dateObj.getDate();
+  time = dateObj.toLocaleTimeString("da-DK", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
-    if (weekday) weekday = weekday.charAt(0).toUpperCase() + weekday.slice(1);
-    if (month) month = month.charAt(0).toUpperCase() + month.slice(1);
-  } catch {
-    weekday = "";
-    day = "";
-    month = "";
-    time = "";
-  }
+  // Sørg for stort begyndelsesbogstav — lidt pænere at se på.
+  if (weekday) weekday = weekday.charAt(0).toUpperCase() + weekday.slice(1);
+  if (month) month = month.charAt(0).toUpperCase() + month.slice(1);
 
+  // Visning af pris: Hvis det er 0, skriv 'Gratis' — ellers skriv beløbet.
   let displayPris;
-
   if (event.pris === 0) {
     displayPris = "Gratis";
   } else if (event.pris > 0) {
-    displayPris = `${event.pris} kr.`;
-  } else {
-    displayPris = event.pris;
+    displayPris = `${event.pris} kr.`; // Standardvisning af pris.
   }
 
   return (

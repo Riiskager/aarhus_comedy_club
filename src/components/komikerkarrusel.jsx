@@ -4,7 +4,7 @@ import "../css/karrusel.css";
 export default function Karrusel({
   images = [],
   autoPlay = true,
-  autoPlayInterval = 8000,
+  autoPlayInterval = 4000,
 }) {
   const [index, setIndex] = useState(0);
   const [isPaused, _setIsPaused] = useState(false);
