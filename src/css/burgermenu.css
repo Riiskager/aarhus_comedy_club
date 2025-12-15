@@ -148,5 +148,12 @@
     position: inherit;
     margin-top: 3.5rem;
     pointer-events: all;
-    
+}
+
+.booking{
+    margin-bottom: 2rem;
+}
+
+.mellemrum{
+    margin-bottom: -2rem;
 }
