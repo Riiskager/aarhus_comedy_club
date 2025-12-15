@@ -2,6 +2,9 @@ import '../css/kontakt.css'
 
 export default function KontaktFormular(){
 
+    //Der sker ikke rigtigt noget fancy heri, da der ikke er et endpoint.
+// alt informationen i den her formular skal selvfølgelig samles i en mail, hvilket er ret simpelt
+// I andre dokumenter, er det vist at vi godt kan samle values og pushe dem andre steder()
     return(
         <div className='formular'>
         <form>

@@ -3,17 +3,20 @@ import { useState } from "react";
 import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 
+//I dette forsøger sriptet at sammenligne værdien i et inputfelt med navnene på gavekort(id)
+
+
 export default function TjekSaldo(){
-    const [gavekortId, setGavekortId] = useState("");
-  const [saldo, setSaldo] = useState(null);
-  const [fejl, setFejl] = useState("");
+  const [gavekortId, setGavekortId] = useState(""); //Indtastet værdi
+  const [saldo, setSaldo] = useState(null); //Saldo, der vises efter gavekort er hentet
+  const [fejl, setFejl] = useState(""); //Til fejl.. sjovt nok
 
   async function handleTjekSaldo(e) {
     e.preventDefault(); // forhindrer page reload
-    setFejl("");
-    setSaldo(null);
+    setFejl(""); //nulstiller fejl
+    setSaldo(null); //Hvis nu man har tjekket ét gavekort, fjerner saldoen
 
-    if (!gavekortId) {
+    if (!gavekortId) { //Hvis der ikke er gavekortID
       setFejl("Indtast venligst et gavekort ID");
       return;
     }
@@ -25,11 +28,11 @@ export default function TjekSaldo(){
 
       if (gavekortSnap.exists()) {
         const data = gavekortSnap.data();
-        setSaldo(data.pris); // her viser vi saldo
+        setSaldo(data.pris); // Sætter saldo til at være "pris" fra firestore dokumentet
       } else {
         setFejl("Gavekort findes ikke");
       }
-    } catch (error) {
+    } catch (error) { //Hvis det fejler
       console.error("Fejl ved hentning af gavekort:", error);
       setFejl("Noget gik galt. Prøv igen.");
     }

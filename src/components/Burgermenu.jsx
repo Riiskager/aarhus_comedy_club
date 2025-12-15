@@ -3,12 +3,14 @@ import '../css/burgermenu.css'
 import Burger from "./Burger";
 
 export default function BurgerMenu() {
+    //Konstanter til at skifte navn/tilstand på kategorier
     const [open, setOpen] =useState(false);
       const [openSubmenu, setOpenSubmenu] = useState(null);  
       
     useEffect(() =>{
         if(open){
             document.body.style.overflow="hidden"; //Hvis burgermenu er åben, så skal man ikke kunne scrolle på "body"
+            //Det er stadig meningen man skal kunne scrolle i menuen... men det kan man ikke
         } else {
             document.body.style.overflow="";
             setOpenSubmenu(null); //Ikke en fejl, kun på grund af "strict mode"
@@ -19,7 +21,7 @@ export default function BurgerMenu() {
 
   return (
     <>
-   <Burger open={open} setOpen={setOpen} />
+   <Burger open={open} setOpen={setOpen} /> {/* Burgerikonet */}
 
    <div className={`menu ${open ? "open" : ""}`}> {/*Tjekker om "open" er sandt, hvis det er, ændrer navn*/}
     <ul>
