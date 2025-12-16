@@ -1,6 +1,6 @@
 import '../css/betal.css'
 
-export default function Bekræft(){
+export default function Bekraeft(){
     return(
 
         <div className="betalbesked">

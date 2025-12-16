@@ -8,7 +8,7 @@ import Gavekort from "./pages/Gavekort";
 import Improholdet from "./pages/Improholdet";
 import Kontakt from "./pages/Kontakt";
 import Opret from "./pages/Opret";
-import Bekræft from "./pages/Bekaeft";
+import Bekraeft from "./pages/Bekraeft";
 import Faq from "./pages/Faq";
 import Forside from "./pages/Forside";
 import Komikerliste from "./pages/Komikerliste";
