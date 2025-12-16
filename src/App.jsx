@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import "./css/App.css";
 import Betal from "./pages/Betal";
 import Event from "./pages/Event";
@@ -8,12 +8,12 @@ import Gavekort from "./pages/Gavekort";
 import Improholdet from "./pages/Improholdet";
 import Kontakt from "./pages/Kontakt";
 import Opret from "./pages/Opret";
-import Bekræft from "./pages/bekaeft";
-import Faq from "./pages/faq";
-import Forside from "./pages/forside";
-import Komikerliste from "./pages/komikerliste";
-import Omos from "./pages/omos";
-import Program from "./pages/program";
+import Bekræft from "./pages/Bekaeft";
+import Faq from "./pages/Faq";
+import Forside from "./pages/Forside";
+import Komikerliste from "./pages/Komikerliste";
+import Omos from "./pages/Omos";
+import Program from "./pages/Program";
 import BookingInfo from "./components/BookingInfo";
 
 function App() {
