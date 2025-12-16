@@ -59,7 +59,7 @@ export default function ForsideKarrusel({
   const buttons = {
     "sokkedyr-slider": { label: "Se event", to: "" },
     sokkedyr3000: { label: "Se event", to: "/events" },
-    program: { label: "Se event", to: "/events" },
+    program: { label: "Se program", to: "/program" },
     komikere: { label: "Se komikere", to: "/komikerliste" },
     gavekort: { label: "Køb gavekort", to: "/gavekort" },
     "om-os": { label: "Læs om os", to: "/historie" },
