@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import '../css/burgermenu.css'
 import Burger from "./Burger";
 import { Link } from "react-router";
+import useCloseMenuOnNavigate from "./useCloseMenuOnNavigate";
 
 export default function BurgerMenu() {
     //Konstanter til at skifte navn/tilstand på kategorier
     const [open, setOpen] =useState(false);
       const [openSubmenu, setOpenSubmenu] = useState(null);  
+
+      useCloseMenuOnNavigate(setOpen);
       
     useEffect(() =>{
         if(open){
