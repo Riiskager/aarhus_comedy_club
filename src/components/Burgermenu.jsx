@@ -26,13 +26,13 @@ export default function BurgerMenu() {
 
    <div className={`menu ${open ? "open" : ""}`}> {/*Tjekker om "open" er sandt, hvis det er, ændrer navn*/}
     <ul>
-        <li className="menuitem"> <Link href="/program"> Program</Link></li>
+        <li className="menuitem"> <Link to="/program"> Program</Link></li>
         <li onClick={() => setOpenSubmenu(openSubmenu === "komikere" ? null : "komikere")} 
             className={`submenu ${openSubmenu === "komikere" ? "open" : ""}`}> {/*Tjekker om submenu er = komiker, hvis ja, skift navn på denne submenu*/}
             Komikere
         <ul className={`submenuitem ${openSubmenu === "komikere" ? "open" : ""}`}> {/*Tjekker om submenu er = komiker, hvis ja, skift navn på disse submenu items*/}
-            <li className="komikerliste"><Link href="/komikerliste">Komikerliste</Link></li>
-            <li className="impro-holdet"><Link href="/impro-holdet">Impro-holdet</Link></li>
+            <li className="komikerliste"><Link to="/komikerliste">Komikerliste</Link></li>
+            <li className="impro-holdet"><Link to="/impro-holdet">Impro-holdet</Link></li>
         </ul>
         </li>
 
@@ -40,26 +40,26 @@ export default function BurgerMenu() {
             className={`submenu mellemrum ${openSubmenu === "booking" ? "open" : ""}`}>
             Booking
         <ul className={`submenuitemb ${openSubmenu === "booking" ? "open" : ""}`}>
-            <li className="komikerliste"><Link href="/komikerliste">Komikere</Link></li>
-            <li className="bookings"><Link href="/booking">Julefrokost</Link></li>
-            <li className="bookings"><Link href="/booking">Firma-comedy</Link></li>
-            <li className="booking"><Link href="/booking">Lej lokale</Link></li>
+            <li className="komikerliste"><Link to="/komikerliste">Komikere</Link></li>
+            <li className="bookings"><Link to="/booking">Julefrokost</Link></li>
+            <li className="bookings"><Link to="/booking">Firma-comedy</Link></li>
+            <li className="booking"><Link to="/booking">Lej lokale</Link></li>
         </ul>
          </li>
         <li onClick={() => setOpenSubmenu(openSubmenu === "omos" ? null : "omos")}
             className={`submenu ${openSubmenu === "omos" ? "open" : ""}`}>
             Om os
         <ul className={`submenuitem ${openSubmenu === "omos" ? "open" : ""}`}>
-            <li className="historie"><Link href="/historie">Vores Historie</Link></li>
-            <li className="kontakt"><Link href="/kontakt">Kontakt</Link></li>
-            <li className="Faq"><Link href="/faq">F.A.Q</Link></li>
+            <li className="historie"><Link to="/historie">Vores Historie</Link></li>
+            <li className="kontakt"><Link to="/kontakt">Kontakt</Link></li>
+            <li className="Faq"><Link to="/faq">F.A.Q</Link></li>
         </ul>
       
         </li>
-        <li className="menuitem"><Link href="/gavekort">Gavekort</Link></li>
+        <li className="menuitem"><Link to="/gavekort">Gavekort</Link></li>
      
     </ul>   
-    <Link href="/" aria-label="Forside">
+    <Link to="/" aria-label="Forside">
         <img
           src="./img/Logo.svg"
           alt="Aarhus Comedy Club logo"
