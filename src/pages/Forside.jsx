@@ -65,13 +65,13 @@ export default function Forside() {
       {}
       <ForsideKarrusel
         images={[
-          "img/sokkedyr-slider.svg",
-          "img/program.png",
-          "img/komikere.png",
-          "img/gavekort.png",
-          "img/om-os.png",
-          "img/booking.png",
-          "img/kontakt.png"
+          "./img/sokkedyr-slider.svg",
+          "./img/program.png",
+          "./img/komikere.png",
+          "./img/gavekort.png",
+          "./img/om-os.png",
+          "./img/booking.png",
+          "./img/kontakt.png"
         ].map(p => encodeURI(p))}
       />
       <h1 className="forside-overskrift">Kommende events</h1>

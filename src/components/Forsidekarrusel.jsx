@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "../css/karrusel.css";
-
+import { Link } from "react-router";
 export default function ForsideKarrusel({
   images = [],
   autoPlay = true,
@@ -57,19 +57,19 @@ export default function ForsideKarrusel({
   };
 
   const buttons = {
-    "sokkedyr-slider": { label: "Se event", href: "" },
-    sokkedyr3000: { label: "Se event", href: "/events" },
-    program: { label: "Se event", href: "/events" },
-    komikere: { label: "Se komikere", href: "/komikerliste" },
-    gavekort: { label: "Køb gavekort", href: "/gavekort" },
-    "om-os": { label: "Læs om os", href: "/historie" },
-    booking: { label: "Book os", href: "/booking" },
-    kontakt: { label: "Kontakt os", href: "/Kontakt" },
+    "sokkedyr-slider": { label: "Se event", to: "" },
+    sokkedyr3000: { label: "Se event", to: "/events" },
+    program: { label: "Se event", to: "/events" },
+    komikere: { label: "Se komikere", to: "/komikerliste" },
+    gavekort: { label: "Køb gavekort", to: "/gavekort" },
+    "om-os": { label: "Læs om os", to: "/historie" },
+    booking: { label: "Book os", to: "/booking" },
+    kontakt: { label: "Kontakt os", to: "/Kontakt" },
   };
 
   const filename = images[index]?.split("/").pop().split(".")[0];
   const title = titles[filename] || "";
-  const button = buttons[filename] || { label: "Se events", href: "/events" };
+  const button = buttons[filename] || { label: "Se events", to: "/events" };
 
   const handleBannerClick = (e) => {
     // If this is the sokkedyr slide, scroll to the first event on the page
@@ -107,13 +107,13 @@ export default function ForsideKarrusel({
 
       <div className="banner">
         <h1>{title}</h1>
-        <a
-          href={button.href}
+        <Link
+          to={button.to}
           className="banner-knap"
           onClick={handleBannerClick}
         >
           <b>{button.label}</b>
-        </a>
+        </Link>
       </div>
 
       <button className="karrusel-arrow left" onClick={prev}>
