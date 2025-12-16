@@ -1,5 +1,6 @@
 import '../css/bookinginfo.css'
 import { useState } from 'react';
+import { Link } from 'react-router';
 
 export default function BookingInfo(){
     const [openCat, setOpenCat] =useState(false);
@@ -25,7 +26,7 @@ export default function BookingInfo(){
                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsum cumque obcaecati? Nisi saepe inventore harum! Omnis, illo. Laboriosam aperiam quam corrupti id excepturi suscipit temporibus, quod fuga asperiores ipsa.e</p>
         
         </div>
-            <button className="book"><a href='/kontakt'>Book her</a></button>
+            <button className="book"><Link to='/kontakt'>Book her</Link></button>
         </div>
         <div className="julefrokost">
         <div id="firma-comedy" onClick={() => setOpenCat(openCat === "firma-comedy" ? null : "firma-comedy")}
@@ -37,7 +38,7 @@ export default function BookingInfo(){
                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsum cumque obcaecati? Nisi saepe inventore harum! Omnis, illo. Laboriosam aperiam quam corrupti id excepturi suscipit temporibus, quod fuga asperiores ipsa.e</p>
         
         </div>
-            <button className="book"><a href='/kontakt'>Book her</a></button>
+            <button className="book"><Link to='/kontakt'>Book her</Link></button>
         </div>
 
         <div className="julefrokost">
@@ -50,7 +51,7 @@ export default function BookingInfo(){
                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsum cumque obcaecati? Nisi saepe inventore harum! Omnis, illo. Laboriosam aperiam quam corrupti id excepturi suscipit temporibus, quod fuga asperiores ipsa.e</p>
         
         </div>
-            <button className="book"><a href='/kontakt'>Book her</a></button>
+            <button className="book"><Link to='/kontakt'>Book her</Link></button>
         </div>
         </>
     )
