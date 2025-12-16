@@ -86,7 +86,7 @@ export default function Forside() {
       )}
 
       <a href="/program" className="forside-se-events">
-        <b>Se alle events</b>
+        <b>Se fuldt program</b>
       </a>
 
       <div className="img-overlay">
