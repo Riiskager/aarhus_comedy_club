@@ -1,20 +1,19 @@
 import { Route, Routes } from "react-router";
+import BookingInfo from "./components/BookingInfo";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./css/App.css";
+import Bekraeft from "./pages/Bekraeft";
 import Betal from "./pages/Betal";
 import Event from "./pages/Event";
+import Forside from "./pages/Forside";
 import Gavekort from "./pages/Gavekort";
 import Improholdet from "./pages/Improholdet";
-import Kontakt from "./pages/Kontakt";
-import Opret from "./pages/Opret";
-import Bekraeft from "./pages/Bekraeft";
-import Faq from "./pages/Faq";
-import Forside from "./pages/Forside";
 import Komikerliste from "./pages/Komikerliste";
+import Kontakt from "./pages/Kontakt";
 import Omos from "./pages/Omos";
+import Opret from "./pages/Opret";
 import Program from "./pages/Program";
-import BookingInfo from "./components/BookingInfo";
 
 function App() {
   return (
