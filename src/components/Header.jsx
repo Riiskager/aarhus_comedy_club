@@ -1,12 +1,13 @@
 import Burgermenu from "./Burgermenu";
 import "../css/header.css";
+import { Link } from "react-router";
 
 export default function Header() {
   return (
     <div className="header">
-      <a href="/" aria-label="Forside">
+      <Link to="/" aria-label="Forside">
         <img src="img/home.svg" alt="home" className="hjemknap"></img>
-      </a>
+      </Link>
       <p>Aarhus Comedy Club</p>
       <Burgermenu />
     </div>
