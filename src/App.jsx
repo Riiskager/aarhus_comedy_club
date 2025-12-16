@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import BookingInfo from "./components/bookinginfo";
+import BookingInfo from "./components/Bookinginfo";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import "./css/App.css";
