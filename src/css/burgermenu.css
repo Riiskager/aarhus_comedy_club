@@ -45,13 +45,14 @@
     flex-direction: column;
     z-index: 998;
     width: 100vw;
-    height: max-content;
+    height: 100vh;
     left: 0;
     background-color:rgb(138, 102, 83, 0.95);
     align-items: center;
     top:-200vh;
     transition: 0.8s ease;
     overflow-y: auto;
+     -webkit-overflow-scrolling: touch;
 }
 
 
