@@ -33,7 +33,7 @@ function App() {
         <Route path="/impro-holdet" element={<Improholdet />} />
         <Route path="/historie" element={<Omos />} />
         <Route path="/betaling" element={<Betal />} />
-        <Route path="/bekræft" element={<Bekræft />} />
+        <Route path="/bekræft" element={<Bekraeft />} />
         <Route path="/faq" element={<Faq />} />
       </Routes>
     
