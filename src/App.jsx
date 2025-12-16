@@ -6,6 +6,7 @@ import "./css/App.css";
 import Bekraeft from "./pages/Bekraeft";
 import Betal from "./pages/Betal";
 import Event from "./pages/Event";
+import FAQ from "./pages/FAQ";
 import Forside from "./pages/Forside";
 import Gavekort from "./pages/Gavekort";
 import Improholdet from "./pages/Improholdet";
@@ -32,7 +33,7 @@ function App() {
         <Route path="/historie" element={<Omos />} />
         <Route path="/betaling" element={<Betal />} />
         <Route path="/bekræft" element={<Bekraeft />} />
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
 
       <Footer />
