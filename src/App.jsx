@@ -9,7 +9,7 @@ import Improholdet from "./pages/Improholdet";
 import Kontakt from "./pages/Kontakt";
 import Opret from "./pages/Opret";
 import Bekraeft from "./pages/Bekraeft";
-import Faq from "./pages/faq";
+import Faq from "./pages/FAQ";
 import Forside from "./pages/Forside";
 import Komikerliste from "./pages/Komikerliste";
 import Omos from "./pages/Omos";
