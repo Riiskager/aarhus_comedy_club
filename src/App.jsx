@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router";
-import BookingInfo from "./components/Bookinginfo";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import "./css/App.css";
@@ -15,6 +14,7 @@ import Forside from "./pages/forside";
 import Komikerliste from "./pages/komikerliste";
 import Omos from "./pages/omos";
 import Program from "./pages/program";
+import BookingInfo from "./components/BookingInfo";
 
 function App() {
  
@@ -25,7 +25,7 @@ function App() {
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="*" element={<Forside />} />
         <Route path="/gavekort" element={<Gavekort />} />
-        <Route path="/booking" element={<BookingInfo />} />
+        <Route path="/booking" element={<BookingInfo/>} />
         <Route path="/komikerliste" element={<Komikerliste />} />
         <Route path="/event/:id" element={<Event />} />
         <Route path="/admin" element={<Opret />} />

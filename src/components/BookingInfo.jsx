@@ -9,10 +9,10 @@ export default function BookingInfo(){
         <div className="introtekst">
                 <h1>Book os</h1>
             <div className='toptekst'>
-                <p1>Kunne du have lyst til at booke Aarhus Comedy Club til et event?
+                <p>Kunne du have lyst til at booke Aarhus Comedy Club til et event?
                 <br/>
                 Så kan du lave en uforpligtigende aftale gennem vores formular, læs om de forskellige booking-muligheder herunder.
-            </p1>
+            </p>
             </div>
         </div>
         <div className="julefrokost">
