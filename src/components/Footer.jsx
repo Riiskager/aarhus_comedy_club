@@ -47,7 +47,7 @@ export default function Footer() {
         </a>
       </div>
       <a href="/" aria-label="Forside">
-        <img src="/img/no-padding-logo.svg" alt="Aarhus Comedy Club logo" className="logo-footer" />
+        <img src="./img/no-padding-logo.svg" alt="Aarhus Comedy Club logo" className="logo-footer" />
       </a>
       <a href="https://www.findsmiley.dk/1463725" className="fugaz">
         Fødevarestyrelsens kontrolrapport
