@@ -1,11 +1,10 @@
 import ForsideKarrusel from "../components/Forsidekarrusel";
 import "../css/improomos.css";
-import { Link } from "react-router";
 
 export default function Improholdet() {
   return (
     <div>
-      <img className="om-os-img" src="./img/booking2.png" alt="" />
+      <img className="om-os-img" src="img/booking2.png" alt="" />
       <div className="banner">
         <h1 className="impro">Impro-holdet</h1>
         <p className="banner-tekst">Læs om, og evt. tilmeld dig Aarhus Comedy Clubs’ impro-hold </p>
@@ -28,7 +27,7 @@ export default function Improholdet() {
           <br />
           <br />
           Hvis du gerne vil være med fra starten af, så tilmeld dig{" "}
-          <Link href="https://www.youtube.com/watch?v=gbYEZPNflFs">her</Link>
+          <a href="https://www.youtube.com/watch?v=gbYEZPNflFs">her</a>
         </p>
         <img src="img/pas.png" />
       </div>
