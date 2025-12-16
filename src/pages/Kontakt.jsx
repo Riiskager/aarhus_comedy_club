@@ -1,5 +1,5 @@
 import "../css/kontakt.css";
-import KontaktFormular from "../css/components/KontaktFormular";
+import KontaktFormular from "../components/KontaktFormular";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 

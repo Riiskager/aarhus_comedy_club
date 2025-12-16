@@ -1,4 +1,4 @@
-import ForsideKarrusel from "../css/components/Forsidekarrusel";
+import ForsideKarrusel from "../components/Forsidekarrusel";
 import "../css/improomos.css";
 
 export default function Improholdet() {

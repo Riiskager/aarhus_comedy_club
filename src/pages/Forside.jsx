@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import Eventcard from "../css/components/Eventcard";
-import ForsideKarrusel from "../css/components/Forsidekarrusel";
+import Eventcard from "../components/Eventcard";
+import ForsideKarrusel from "../components/Forsidekarrusel";
 import "../css/banner.css";
 import "../css/forside.css";
 

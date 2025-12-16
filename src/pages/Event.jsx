@@ -3,7 +3,7 @@ import "../css/eventside.css";
 import { db } from "../firebase";
 import { useEffect, useState } from "react";
 import { doc, getDoc, collection, getDocs } from "firebase/firestore";
-import Komikercard from "../css/components/Komikercard";
+import Komikercard from "../components/Komikercard";
 import { useNavigate } from "react-router";
 
 export default function EventPage() {

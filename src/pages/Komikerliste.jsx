@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
-import Komikercard from "../css/components/Komikercard";
-import KomikerKarrusel from "../css/components/Komikerkarrusel";
+import Komikercard from "../components/Komikercard";
+import KomikerKarrusel from "../components/Komikerkarrusel";
 
 export default function Komikerliste() {
   const [komikere, setKomikere] = useState([]);

@@ -1,5 +1,5 @@
-import GavekortFormular from "../css/components/GavekortFormular";
-import TjekSaldo from "../css/components/TjekSaldo";
+import GavekortFormular from "../components/GavekortFormular";
+import TjekSaldo from "../components/TjekSaldo";
 
 export default function Gavekort() {
   return (
