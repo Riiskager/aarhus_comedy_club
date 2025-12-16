@@ -1,5 +1,5 @@
 import "../css/eventcard.css";
-
+import { Link } from "react-router";
 export default function Eventcard({ event }) {
   // Lav et Date-objekt ud fra `event.dato`.
   // Hvis det er en Firestore Timestamp, brug .toDate(), ellers brug værdien direkte.
@@ -47,9 +47,9 @@ export default function Eventcard({ event }) {
       <h1 className="event-titel">{event.titel}</h1>
       <p className="event-kort-beskrivelse">{event.kort_beskrivelse}</p>
       <p className="event-pris">{displayPris}</p>
-      <a href={`/event/${event.id}`} key={event.id} className="event-koeb">
+      <Link to={`/event/${event.id}`} key={event.id} className="event-koeb">
         <b>Køb billet</b>
-      </a>
+      </Link>
     </section>
   );
 }
