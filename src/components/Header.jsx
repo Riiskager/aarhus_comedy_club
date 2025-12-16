@@ -1,4 +1,4 @@
-import BurgerMenu from "../components/burgermenu";
+import BurgerMenu from "./burgermenu";
 import "../css/header.css";
 import { Link } from "react-router";
 
