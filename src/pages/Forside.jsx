@@ -90,7 +90,7 @@ export default function Forside() {
       </a>
 
       <div className="img-overlay">
-        <img src="/img/acc.webp" alt="" className="forside-img" />
+        <img src="img/acc.webp" alt="" className="forside-img" />
         <div className="overlay">
           <div className="overlay-box">
             <h1>Aarhus Comedy Club</h1>
@@ -103,7 +103,7 @@ export default function Forside() {
       </div>
 
       <div className="img-overlay">
-        <img src="/img/acc.webp" alt="" className="forside-img" />
+        <img src="img/acc.webp" alt="" className="forside-img" />
         <div className="overlay">
           <div className="overlay-box">
             <h1>Bliv medlem</h1>

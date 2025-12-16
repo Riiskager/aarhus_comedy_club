@@ -9,10 +9,10 @@ export default function Footer() {
       </div>
       <div className="social-links">
         <a href="https://www.instagram.com/aarhuscomedyclub/">
-          <img src="/img/instagram-hvid.svg" alt="Instagram" />
+          <img src="img/instagram-hvid.svg" alt="Instagram" />
         </a>
         <a href="https://www.facebook.com/aarhuscomedyclub">
-          <img src="/img/facebook-hvid.svg" alt="Facebook" />
+          <img src="img/facebook-hvid.svg" alt="Facebook" />
         </a>
       </div>
       <div>
@@ -23,9 +23,7 @@ export default function Footer() {
       </div>
       <div>
         <p className="fugaz">Åbnigstider:</p>
-        <p>
-          Vi har kun åbent på dage med events og vi åbner en time før showstart
-        </p>
+        <p>Vi har kun åbent på dage med events og vi åbner en time før showstart</p>
       </div>
       <div className="footer-navigering">
         <a href="/Kontakt">
@@ -49,11 +47,7 @@ export default function Footer() {
         </a>
       </div>
       <a href="/" aria-label="Forside">
-        <img
-          src="public/img/Logo.svg"
-          alt="Aarhus Comedy Club logo"
-          className="logo-footer"
-        />
+        <img src="public/img/Logo.svg" alt="Aarhus Comedy Club logo" className="logo-footer" />
       </a>
       <a href="https://www.findsmiley.dk/1463725" className="fugaz">
         Fødevarestyrelsens kontrolrapport
