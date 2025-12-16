@@ -21,7 +21,7 @@ export default function Komikerliste() {
   return (
     <div>
       <KomikerKarrusel
-        images={["/img/kim.png", "/img/johnny.png", "/img/mia.png", "/img/pas.png", "/img/henrik.png"].map(p =>
+        images={["./img/kim.png", "./img/johnny.png", "./img/mia.png", "./img/pas.png", "./img/henrik.png"].map(p =>
           encodeURI(p)
         )}
       />
