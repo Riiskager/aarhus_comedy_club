@@ -45,8 +45,7 @@
     flex-direction: column;
     z-index: 998;
     width: 100vw;
-    min-height: 100vh;
-    height: fit-content;
+    height: max-content;
     left: 0;
     background-color:rgb(138, 102, 83, 0.95);
     align-items: center;
@@ -69,6 +68,7 @@
     width: 12rem;
     height: auto;
     margin-top: 3rem;
+    margin-bottom: 4rem;
 }
 
 .menu li{
