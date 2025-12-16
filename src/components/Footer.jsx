@@ -27,7 +27,7 @@ export default function Footer() {
         <p>Vi har kun åbent på dage med events og vi åbner en time før showstart</p>
       </div>
       <div className="footer-navigering">
-        <Link to="/Kontakt">
+        <Link to="/kontakt">
           {" "}
           <b>Kontakt</b>
         </Link>
