@@ -5,6 +5,6 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig(({ command }) => {
   return {
     plugins: [react()],
-    base: command === "serve" ? "/" : "/post-app-with-firebase/"
+    base: command === "serve" ? "/" : "/aarhus_comedy_club/"
   };
 });
