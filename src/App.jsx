@@ -20,7 +20,7 @@ import Faq from './pages/faq'
 function App() {
  
  return (
-    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/aarhus_comedy_club"}>
+    <>
       <Header />
       <Routes>
         <Route path="/kontakt" element={<Kontakt />} />
@@ -38,8 +38,10 @@ function App() {
         <Route path="/faq" element={<Faq/>}/>
 
       </Routes>
-      <Footer/>
-    </BrowserRouter>
+    
+      <Footer/> 
+       </>
+  
   );
 }
 
