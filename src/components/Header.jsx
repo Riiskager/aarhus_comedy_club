@@ -1,4 +1,4 @@
-import BurgerMenu from "./burgermenu";
+import Burgermenu from "./Burgermenu";
 import "../css/header.css";
 import { Link } from "react-router";
 
@@ -10,7 +10,7 @@ export default function Header() {
         <img src="img/home.svg" alt="home" className="hjemknap"></img>
       </Link>
       <p>Aarhus Comedy Club</p>
-      <BurgerMenu />
+      <Burgermenu />
     </div>
   );
 }
