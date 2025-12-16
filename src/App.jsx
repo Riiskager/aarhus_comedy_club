@@ -17,15 +17,14 @@ import Program from "./pages/Program";
 import BookingInfo from "./components/BookingInfo";
 
 function App() {
- 
- return (
+  return (
     <>
       <Header />
       <Routes>
         <Route path="/kontakt" element={<Kontakt />} />
         <Route path="*" element={<Forside />} />
         <Route path="/gavekort" element={<Gavekort />} />
-        <Route path="/booking" element={<BookingInfo/>} />
+        <Route path="/booking" element={<BookingInfo />} />
         <Route path="/komikerliste" element={<Komikerliste />} />
         <Route path="/event/:id" element={<Event />} />
         <Route path="/admin" element={<Opret />} />
@@ -33,13 +32,12 @@ function App() {
         <Route path="/impro-holdet" element={<Improholdet />} />
         <Route path="/historie" element={<Omos />} />
         <Route path="/betaling" element={<Betal />} />
-        <Route path="/bekræft" element={<Bekræft />} />
+        <Route path="/bekræft" element={<Bekraeft />} />
         <Route path="/faq" element={<Faq />} />
       </Routes>
-    
-      <Footer/> 
-       </>
-  
+
+      <Footer />
+    </>
   );
 }
 
