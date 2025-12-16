@@ -1,4 +1,5 @@
 import "../css/footer.css";
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
@@ -26,29 +27,29 @@ export default function Footer() {
         <p>Vi har kun åbent på dage med events og vi åbner en time før showstart</p>
       </div>
       <div className="footer-navigering">
-        <a href="/Kontakt">
+        <Link to="/Kontakt">
           {" "}
           <b>Kontakt</b>
-        </a>
+        </Link>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
           {" "}
           <b>Nyhedsbrev</b>
         </a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
+        <Link to="/faq">
           <b>F.A.Q</b>
-        </a>
+        </Link>
       </div>
       <div className="footer-navigering">
-        <a href="/gavekort">
+        <Link to="/gavekort">
           <b>Gavekort</b>
-        </a>
+        </Link>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
           <b>Billetrefundering</b>
         </a>
       </div>
-      <a href="/" aria-label="Forside">
+      <Link to="/" aria-label="Forside">
         <img src="./img/no-padding-logo.svg" alt="Aarhus Comedy Club logo" className="logo-footer" />
-      </a>
+      </Link>
       <a href="https://www.findsmiley.dk/1463725" className="fugaz">
         Fødevarestyrelsens kontrolrapport
       </a>
