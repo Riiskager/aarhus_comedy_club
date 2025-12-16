@@ -33,7 +33,7 @@ export default function BurgerMenu() {
             Komikere
         <ul className={`submenuitem ${openSubmenu === "komikere" ? "open" : ""}`}> {/*Tjekker om submenu er = komiker, hvis ja, skift navn på disse submenu items*/}
             <li className="komikerliste"><Link to="/komikerliste" onClick={() => setOpen(false)}>Komikerliste</Link></li>
-            <li className="impro-holdet"><Link to="/impro-holdet">Impro-holdet</Link></li>
+            <li className="impro-holdet"><Link to="/impro-holdet" onClick={() => setOpen(false)}>Impro-holdet</Link></li>
         </ul>
         </li>
 
@@ -41,23 +41,23 @@ export default function BurgerMenu() {
             className={`submenu mellemrum ${openSubmenu === "booking" ? "open" : ""}`}>
             Booking
         <ul className={`submenuitemb ${openSubmenu === "booking" ? "open" : ""}`}>
-            <li className="komikerliste"><Link to="/komikerliste">Komikere</Link></li>
-            <li className="bookings"><Link to="/booking">Julefrokost</Link></li>
-            <li className="bookings"><Link to="/booking">Firma-comedy</Link></li>
-            <li className="booking"><Link to="/booking">Lej lokale</Link></li>
+            <li className="komikerliste"><Link to="/komikerliste" onClick={() => setOpen(false)}>Komikere</Link></li>
+            <li className="bookings"><Link to="/booking" onClick={() => setOpen(false)}>Julefrokost</Link></li>
+            <li className="bookings"><Link to="/booking" onClick={() => setOpen(false)}>Firma-comedy</Link></li>
+            <li className="booking"><Link to="/booking" onClick={() => setOpen(false)}>Lej lokale</Link></li>
         </ul>
          </li>
         <li onClick={() => setOpenSubmenu(openSubmenu === "omos" ? null : "omos")}
             className={`submenu ${openSubmenu === "omos" ? "open" : ""}`}>
             Om os
         <ul className={`submenuitem ${openSubmenu === "omos" ? "open" : ""}`}>
-            <li className="historie"><Link to="/historie">Vores Historie</Link></li>
-            <li className="kontakt"><Link to="/kontakt">Kontakt</Link></li>
-            <li className="Faq"><Link to="/faq">F.A.Q</Link></li>
+            <li className="historie"><Link to="/historie" onClick={() => setOpen(false)}>Vores Historie</Link></li>
+            <li className="kontakt"><Link to="/kontakt" onClick={() => setOpen(false)}>Kontakt</Link></li>
+            <li className="Faq"><Link to="/faq" onClick={() => setOpen(false)}>F.A.Q</Link></li>
         </ul>
       
         </li>
-        <li className="menuitem"><Link to="/gavekort">Gavekort</Link></li>
+        <li className="menuitem"><Link to="/gavekort" onClick={() => setOpen(false)}>Gavekort</Link></li>
      
     </ul>   
     <Link to="/" aria-label="Forside">
