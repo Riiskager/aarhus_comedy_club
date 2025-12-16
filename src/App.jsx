@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
-import BookingInfo from "./components/BookingInfo";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import BookingInfo from "./css/components/BookingInfo";
+import Footer from "./css/components/Footer";
+import Header from "./css/components/Header";
 import "./css/App.css";
 import Bekraeft from "./pages/Bekraeft";
 import Betal from "./pages/Betal";
