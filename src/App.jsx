@@ -19,7 +19,6 @@ import Program from "./pages/program";
 function App() {
   return (
     <>
-      {" "}
       <Header />
       <Routes>
         <Route path="/kontakt" element={<Kontakt />} />

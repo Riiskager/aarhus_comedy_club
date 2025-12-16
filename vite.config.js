@@ -3,15 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
-  const config = {
+  return {
     plugins: [react()],
-    base: "/"
+    base: command === "serve" ? "/" : "/post-app-with-firebase/"
   };
-
-  // Change base path when building for production
-  if (command !== "serve") {
-    config.base = "/aarhus_comedy_club/"; // 👈 Replace with your GitHub repository name
-  }
-
-  return config;
 });
