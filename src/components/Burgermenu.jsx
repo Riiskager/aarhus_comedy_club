@@ -8,6 +8,7 @@ export default function BurgerMenu() {
     const [open, setOpen] =useState(false);
       const [openSubmenu, setOpenSubmenu] = useState(null);  
       
+    
     useEffect(() =>{
         if(open){
             document.body.style.overflow="hidden"; //Hvis burgermenu er åben, så skal man ikke kunne scrolle på "body"
@@ -31,7 +32,7 @@ export default function BurgerMenu() {
             className={`submenu ${openSubmenu === "komikere" ? "open" : ""}`}> {/*Tjekker om submenu er = komiker, hvis ja, skift navn på denne submenu*/}
             Komikere
         <ul className={`submenuitem ${openSubmenu === "komikere" ? "open" : ""}`}> {/*Tjekker om submenu er = komiker, hvis ja, skift navn på disse submenu items*/}
-            <li className="komikerliste"><Link to="/komikerliste">Komikerliste</Link></li>
+            <li className="komikerliste"><Link to="/komikerliste" onClick={() => setOpen(false)}>Komikerliste</Link></li>
             <li className="impro-holdet"><Link to="/impro-holdet">Impro-holdet</Link></li>
         </ul>
         </li>
