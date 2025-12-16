@@ -6,7 +6,7 @@ import "./css/App.css";
 import Bekraeft from "./pages/Bekraeft";
 import Betal from "./pages/Betal";
 import Event from "./pages/Event";
-import FAQ from "./components/FAQ";
+import FAQ from "./pages/FAQ";
 import Forside from "./pages/Forside";
 import Gavekort from "./pages/Gavekort";
 import Improholdet from "./pages/Improholdet";
