@@ -44,8 +44,9 @@
 .knappen{
     border: none;
     background-color: var(--blaa);
-    width: 60%;
-    height: 3rem;
+    aspect-ratio: 13/3;
+    width: 13rem;
+    min-height: 3rem;
     color: var(--lysbeige);
     font-family: var(--broed);
     font-weight: 600;
@@ -88,4 +89,20 @@
     text-align: center;
     margin: 2rem 0;
     font-size: 48px;
+}
+@media (min-width: 1000px){
+    .info p{
+        font-size: 1.8rem;
+        width: 13rem;
+        align-self: center;
+    }
+    .knappen{
+        width: 16rem;
+    }
+}
+
+.komikerstyling{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
