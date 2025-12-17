@@ -60,10 +60,11 @@ export default function Program() {
   return (
     <div className="programside">
       <h1 className="overskrift">Program</h1>
-
+    <div className="eventer">
       {events.map(event => (
         <Eventcard key={event.id} event={event} />
       ))}
+      </div>
     </div>
   );
 }
