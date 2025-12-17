@@ -13,8 +13,8 @@ export default function Komikercard({ komiker }) {
       <p className="komiker-beskrivelse">{komiker?.beskrivelse}</p>
       <div className="komiker-blaa">
         <div className="komiker-social">
-        <a href={komiker?.instagram}>  <img src="./img/instagram.svg" alt="Instagram" /> </a>
-         <a href={komiker?.facebook}>  <img src="./img/facebook.svg" alt="Facebook" /></a>
+        <a href={komiker?.instagram} target="_blank" rel="noopener noreferrer">  <img src="/img/instagram.svg" alt="Instagram" /> </a>
+         <a href={komiker?.facebook} target="_blank" rel="noopener noreferrer">  <img src="/img/facebook.svg" alt="Facebook" /></a>
         </div>
         <a href={komiker?.booking} className="komiker-book">
           <b>Book</b>
