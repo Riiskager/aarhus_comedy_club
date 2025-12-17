@@ -133,3 +133,8 @@
   max-width: 60%;
 }
 
+@media(max-width: 402px){
+  .show{
+    width: 340px;
+  }
+}
