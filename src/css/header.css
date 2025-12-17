@@ -1,13 +1,13 @@
 .header{
     display: flex;
     justify-content: space-between;
-    align-items:end;
+    align-items: center;
     background-color: var(--morkebrun);
     color: var(--lysbeige);
     font-family: var(--overskrift);
     font-size: 20px;
-    height: 104px;
-    padding: 0rem 1.5rem 0.5rem 1.5rem;
+    height: 40px;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
 }
 .header p{
     margin-bottom: 0.5rem;

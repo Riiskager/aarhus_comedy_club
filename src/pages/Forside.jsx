@@ -71,8 +71,8 @@ export default function Forside() {
           "./img/gavekort.png",
           "./img/om-os.png",
           "./img/booking.png",
-          "./img/kontakt.png"
-        ].map(p => encodeURI(p))}
+          "./img/kontakt.png",
+        ].map((p) => encodeURI(p))}
       />
       <h1 className="forside-overskrift">Kommende events</h1>
       <div className="eventer">
@@ -95,7 +95,10 @@ export default function Forside() {
         <div className="overlay">
           <div className="overlay-box">
             <h1>Aarhus Comedy Club</h1>
-            <p>Comedyklubben af komikere, for komikere, og til alle, der elsker at grine !</p>
+            <p>
+              Comedyklubben af komikere, for komikere, og til alle, der elsker
+              at grine !
+            </p>
             <a href="/booking" className="overlay-btn">
               <b>Læs om os</b>
             </a>
@@ -108,7 +111,10 @@ export default function Forside() {
         <div className="overlay">
           <div className="overlay-box">
             <h1>Bliv medlem</h1>
-            <p>Udforsk de forskellige muligheder ud har for at booke aarhus comedyclub herinde</p>
+            <p>
+              Udforsk de forskellige muligheder ud har for at booke aarhus
+              comedyclub herinde
+            </p>
             <a href="/booking" className="overlay-btn">
               <b>Book os</b>
             </a>
