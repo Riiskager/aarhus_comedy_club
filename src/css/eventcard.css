@@ -82,8 +82,6 @@
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-}
-
 .dato-weekday {
   font-size: 12px;
   margin-bottom: 6px;
@@ -124,3 +122,5 @@
   color: var(--morketext);
   max-width: 60%;
 }
+}
+
