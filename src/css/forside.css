@@ -83,16 +83,17 @@ h1{
   font-size: 20px;
 }
 
-@media (min-width: 402px) {
+
   .img-overlay .overlay {
     align-items: center;
+    width: 100%;
     justify-content: center;
   }
   .img-overlay .overlay-box {
     flex-direction: column;
     width: calc(100% - 24px);
   }
-}
+
 
 .eventer{
   display: flex;
