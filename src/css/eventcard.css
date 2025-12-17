@@ -17,6 +17,12 @@
     box-shadow: -8px 10px 10px rgba(0, 0, 0, 0.25);
   }
 
+  .show:hover{
+    box-shadow: -10px 12px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(1.07);
+    transition: 0.3s ease;
+  }
+
   .event-dato {
   position: absolute;
   top: -8px;
@@ -79,6 +85,11 @@
   text-decoration: none;
   font-size: 20px;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.event-koeb:hover{
+  box-shadow: -5px 6px 6px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+  transition: 0.2s ease;
 }
 
 .dato-weekday {
