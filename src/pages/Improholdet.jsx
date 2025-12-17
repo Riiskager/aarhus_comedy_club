@@ -29,7 +29,7 @@ export default function Improholdet() {
           Hvis du gerne vil være med fra starten af, så tilmeld dig{" "}
           <a href="https://www.youtube.com/watch?v=gbYEZPNflFs">her</a>
         </p>
-        <img src="img/pas.png" />
+        <img className="om-os-img" src="img/pas.png" />
       </div>
     </div>
   );

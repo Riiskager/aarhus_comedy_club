@@ -16,6 +16,7 @@ export default function BookingInfo(){
             </p>
             </div>
         </div>
+        <div className='informationsbokse'>
         <div className="julefrokost">
         <div id="julefrokost" onClick={() => setOpenCat(openCat === "julefrokost" ? null : "julefrokost")}
         className={`cat ${openCat === "julefrokost" ? "open" : ""}`} >
@@ -52,6 +53,7 @@ export default function BookingInfo(){
         
         </div>
             <button className="book"><Link to='/kontakt'>Book her</Link></button>
+        </div>
         </div>
         </>
     )

@@ -57,6 +57,7 @@
     margin: 2rem 0;
     position: relative;
     overflow: visible;
+    width: 25rem;
 }
 .julefrokost button{
     bottom: 1rem;
@@ -88,4 +89,10 @@
 }
 .book a{
     text-decoration: none;
+}
+
+.informationsbokse{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

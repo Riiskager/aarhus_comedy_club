@@ -20,6 +20,7 @@ export default function Kontakt() {
 
   return (
     <>
+    <div className="kontaktside">
       <div className="introtekst">
         {/* Det kan tilføjes på mange forskellige måder
            Men her er admin login */}
@@ -50,6 +51,7 @@ export default function Kontakt() {
         </p>
       </div>
       <KontaktFormular />
+      </div>
     </>
   );
 }

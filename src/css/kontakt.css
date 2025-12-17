@@ -102,3 +102,11 @@
     color: var(--morkebrun);
     border: 2px solid var(--morkebrun);
     }
+
+
+
+    @media(min-width: 1000px){
+      .kontaktside{
+        display: flex;
+      }
+    }
