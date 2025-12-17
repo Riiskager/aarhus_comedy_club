@@ -1,12 +1,9 @@
 import "../css/eventcard.css";
 import { Link } from "react-router";
 export default function Eventcard({ event }) {
-  // Lav et Date-objekt ud fra `event.dato`.
-  // Hvis det er en Firestore Timestamp, brug .toDate(), ellers brug værdien direkte.
-  const dateObj =
-    event?.dato && typeof event.dato.toDate === "function"
-      ? event.dato.toDate()
-      : event?.dato;
+
+  // `event.dato` er altid en Firestore Timestamp, så konverter direkte til Date.
+  const dateObj = event.dato.toDate();
 
   let weekday = "";
   let day = "";
