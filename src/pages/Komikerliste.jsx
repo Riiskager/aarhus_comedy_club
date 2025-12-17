@@ -3,6 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import Komikercard from "../components/Komikercard";
 import KomikerKarrusel from "../components/Komikerkarrusel";
+import '../css/komikerliste.css'
 
 export default function Komikerliste() {
   const [komikere, setKomikere] = useState([]);
