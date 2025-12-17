@@ -75,6 +75,7 @@ export default function Forside() {
         ].map(p => encodeURI(p))}
       />
       <h1 className="forside-overskrift">Kommende events</h1>
+      <div className="eventer">
       {events.slice(0, 6).map((event, idx) =>
         idx === 0 ? (
           <div id="first-event" key={event.id}>
@@ -84,7 +85,7 @@ export default function Forside() {
           <Eventcard key={event.id} event={event} />
         )
       )}
-
+      </div>
       <a href="/program" className="forside-se-events">
         <b>Se fuldt program</b>
       </a>

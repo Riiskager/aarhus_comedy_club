@@ -83,7 +83,7 @@ h1{
   font-size: 20px;
 }
 
-@media (max-width: 720px) {
+@media (min-width: 402px) {
   .img-overlay .overlay {
     align-items: center;
     justify-content: center;
@@ -92,4 +92,12 @@ h1{
     flex-direction: column;
     width: calc(100% - 24px);
   }
+}
+
+.eventer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.75rem;
+  margin-bottom: 2rem;
 }
