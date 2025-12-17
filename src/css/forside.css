@@ -76,13 +76,16 @@ h1{
   background-color: var(--blaa);
   color: var(--lysbeige);
    padding: 8px 5px;
-   width: 199px;
+   width: 35vw;
    height: 35px;
   text-decoration: none;
   font-style: italic;
   font-size: 20px;
 }
 
+.overlay h1{
+    font-size: 7vw;
+}
 
   .img-overlay .overlay {
     align-items: center;

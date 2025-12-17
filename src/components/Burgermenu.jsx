@@ -61,7 +61,7 @@ export default function BurgerMenu() {
      
     </ul>   
     <Link to="/" aria-label="Forside">
-        <img
+        <img onClick={() => setOpen(false)}
           src="./img/Logo.svg"
           alt="Aarhus Comedy Club logo"
           className="logoheader"
