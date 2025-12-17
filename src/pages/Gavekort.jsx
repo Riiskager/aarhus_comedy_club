@@ -17,8 +17,10 @@ export default function Gavekort(){
           <i>Minimumsbeløb 100 kr.</i>
           <p>Restbeløb kan bruges i vores bar;)</p>
         </p>
+        <div className="kontaktside">
         <GavekortFormular />
         <TjekSaldo />
+        </div>
       </div>
     );
 }
